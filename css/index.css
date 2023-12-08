@@ -52,6 +52,35 @@ section .ani_txt span::after {
 }
 
 
+
+
+
+/* 공통 섹션 슬라이드 효과 */
+/* .section.active .section_inner {
+    transform: translateY(0) scale(1) rotate(0.001deg);
+}
+.section.sec1 .section_inner {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: -1;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: cover;
+    transition: transform 1.2s ease;
+    transform: translateY(-100%) scale(0.85) rotate(0.001deg);
+} */
+
+
+
+
+
+
+
+
+
+
+
 /* nav */
 header {
     position: fixed;
@@ -90,8 +119,8 @@ header nav ul li span a {
 .section.sec1 .section_inner .swiper-slide .ani_txt>span {
     font-size: 70px; color: transparent; -webkit-text-stroke: 1px #fff; font-weight: 900; text-align: center;letter-spacing: normal;display: block;margin-bottom: 50px;
 }
-.section.sec1 .section_inner .swiper-slide>h1 {border: 1px solid #fff;color: #fff;font-size: 54px;line-height: 100px;text-align: center;}
-
+.section.sec1 .section_inner .swiper-slide h1 {border: 1px solid #fff;color: #fff;font-size: 54px;line-height: 100px;text-align: center;font-weight: 500;}
+.section.sec1 .section_inner .swiper-slide .swiperwrapper {border: 4px solid red;}
 
 
 
@@ -137,15 +166,33 @@ header nav ul li span a {
     width: 100%;
     height: 100%;
     text-align: center;
-    border: 5px solid red;
-
 }
-.popUp>div.textPop {border: 4px solid red;overflow-y: scroll;}
-.popUp>div.textPop .contentGr {padding: 30px;padding: 50px;position: relative;}
-.popUp>div.textPop .contentGr .detail {display: flex;}
+.popUp>div.textPop {width: 100%;height: 100%;;}
+
+
+.popUp>div.textPop .contentGr {padding: 30px;padding: 50px;position: relative;width: 100%;height: 100%;}
+.popUp>div.textPop .contentGr .detail {
+    position: relative;
+    border: 10px solid red;
+    height: 100%;
+    width: 100%;
+}
 .popUp>div.textPop .contentGr .detail>div {flex: 1;}
-.popUp>div.textPop .contentGr .detail>div:nth-child(1) {position: fixed;}
+.popUp>div.textPop .contentGr .detail>div:nth-child(1) {position: fixed;width: 40%;border: 10px solid green;}
 .popUp>div.textPop .contentGr .detail>div:nth-child(1)>img {width: 50%;}
+.popUp>div.textPop .contentGr .detail>div:nth-child(2) {
+    border: 5px solid blue;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60%;
+    transform: translateY(-50%);
+    /* margin: 0 0 0 70px; */
+    /* padding-top: 100px; */
+    z-index: 10;
+    height: 100%;
+    overflow-y: scroll;
+}
 /* .popUp>div.textPop .contentGr>div>img {width: 106px;height: 106px;width: 120px;height: 120px;}
 .popUp>div.textPop .contentGr>div>h1 {font-size: 22px;font-size: 26px;letter-spacing: -0.05em;font-weight: bold;margin-top: 33px;}
 .popUp>div.textPop .contentGr>div>p {margin-top: 20px;letter-spacing: -0.05em;font-size: 18px;font-size: 20px;font-weight: 300;}
