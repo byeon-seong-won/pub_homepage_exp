@@ -2,26 +2,15 @@
 
 
 
-#fullpage {
-    width:100%;
-    height:100%;
-  }
+#fullpage {width:100%;height:100%;}
+
+
+
 
 /* 공통 텍스트 효과 */
-section .ani_txt {
-    font-family: 'Exo 2', sans-serif;
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-align: center;
-    margin-top: 4.629vh;
-}
+section .ani_txt {color: #fff;padding: 0;font-weight: 600;text-align: center;margin-bottom: 50px;}
+section .ani_txt span {position: relative;}
 
-section .ani_txt span {
-    position: relative;
-}
-section .sec1 .ani_txt span.animation::after,
 section .sec2 .ani_txt span.animation::after,
 section .sec3 .ani_txt span.animation::after,
 section .sec4 .ani_txt span.animation::after {
@@ -30,8 +19,12 @@ section .sec4 .ani_txt span.animation::after {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
-
-
+section .sec1 .ani_txt span.animation::after {
+    -webkit-animation: block-disapper 0.8s ease;
+    animation: block-disapper 0.8s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
 
 section .ani_txt span::after {
     content: '';
@@ -93,12 +86,17 @@ header {
     box-sizing: border-box;
     line-height: 60px;
 }
-header nav {border: 3px solid red;z-index: 1000;}
-header nav ul li {display: flex;justify-content: end;align-items: center;gap: 50px;}
-header nav ul li span a {
+header nav {z-index: 1000;}
+header nav ul {display: flex;justify-content: end;align-items: center;gap: 50px;}
+header nav ul li a {
     font-family: 'Montserrat', sans-serif !important;
     color: rgba(31, 31, 31,0.5);
-    font-size: 18px;color: #fff;}
+    font-size: 18px;
+    font-weight: 600;
+}
+header nav #menu li.active {border-bottom: 4px solid #171717;color: #fff;}
+header nav #menu li a {color: #1e1e1e;}
+
 
 .section {width: 100%;height: 100%;box-sizing: border-box;}
 .section div.section_inner {
@@ -106,6 +104,7 @@ header nav ul li span a {
     border: 6px solid blue;
     height: calc(100% - 120px);
     width: calc(100% - 120px);
+    padding-top: 60px;
     box-sizing: border-box;
 }
 
@@ -117,7 +116,7 @@ header nav ul li span a {
 .section.sec1 .fp-tableCell>img {position: absolute;z-index: 10000;left: 0;bottom: 0;width: 100%;}
 .section.sec1 .section_inner img {border: 1px solid #000;}
 .section.sec1 .section_inner .swiper-slide .ani_txt>span {
-    font-size: 70px; color: transparent; -webkit-text-stroke: 1px #fff; font-weight: 900; text-align: center;letter-spacing: normal;display: block;margin-bottom: 50px;
+    font-size: 70px; color: transparent; -webkit-text-stroke: 1px #fff; font-weight: 900; text-align: center;letter-spacing: normal;
 }
 .section.sec1 .section_inner .swiper-slide h1 {border: 1px solid #fff;color: #fff;font-size: 54px;line-height: 100px;text-align: center;font-weight: 500;}
 .section.sec1 .section_inner .swiper-slide .swiperwrapper {border: 4px solid red;}
@@ -130,20 +129,56 @@ header nav ul li span a {
 /* swiper 관련 */
 .swiper-container {width: 100%;height: 100%;}
 .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;  
 }
 
 
+
+
+
+
 /* section02 - About */
-.section.sec2 {background-color: #f0f0f0;}
-.section.sec2 .section_inner>div {display: flex;border: 3px solid red;}
+.section.sec2 {background-color: #f0f0f0;border: 5px solid green;padding: 0 120px 0 60px;}
+.section.sec2 .fp-tableCell {display: flex;justify-content: space-between;align-items: center;width: 100%;height: 100%;}
+.section.sec2 .fp-tableCell>div {height: 100%;}
+.section.sec2 .fp-tableCell>div.leftText {width: 583px;display: table;}
+
+.section.sec2 .fp-tableCell>div.leftText .tableCell {display: table-cell;vertical-align: middle;}
+.section.sec2 .fp-tableCell>div.leftText .tableCell .titleText {display: flex;justify-content: space-between;}
+.section.sec2 .fp-tableCell>div.leftText .tableCell>h2 {margin-top: 40px;letter-spacing: normal;font-family: 'Nanum Myeongjo', serif;font-size: 40px;font-size: 400;color: rgba(0,0,0,0.7);font-style: italic;}
+.section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt>span:nth-child(1) {line-height: 50px;letter-spacing: -0.05em;text-align: left;display: block;margin-top: 3.1vw;font-family: 'noto sans KR', sans-serif;font-size: 34px;font-weight: bold;color: #000;}
+.section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt>span:nth-child(2) {margin-top: 2.6vw;font-weight: 300;font-size: 20px;line-height: 30px;color: #000;display: block;text-align: left;}
+
+.section.sec2 .rightImg {position: relative;border: 3px solid #000;flex: 1;}
+.section.sec2 .rightImg>img {position: absolute;left: 50%;transform: translate(-50%,-50%);}
+.section.sec2 .rightImg>img.ball {top: 0;}
+.section.sec2 .rightImg>img.circle {top: 50%;}
+
+
+
+
+
+
+
+
+/* .section.sec2 .section_inner {border: 4px solid blue;padding-top: 60px;} */
+/* .section.sec2 .section_inner>div {display: flex;border: 3px solid red;}
 .section.sec2 .section_inner>div>div {border: 1px solid #000;flex: 1;}
-.section.sec2 .section_inner .leftText .ani_txt span {color: #333;}
+.section.sec2 .section_inner .leftText .ani_txt {width: 583px;border: 3px solid blue;}
+.section.sec2 .section_inner .leftText .ani_txt span {color: #333;} */
+
+
+
+
+
+
+
+
 
 
 /* section03 - services */
