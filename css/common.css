@@ -62,3 +62,115 @@ img{vertical-align:top;font-size:0;border:0;}
 
 
 
+
+
+
+
+/* /////////// 공통 /////////// */
+.scrdown {position: absolute;bottom: 0;right: 60px;text-align: center;}
+.scrdown>div {height: 100px;width: 1px;background-color: #fff;margin: 0 auto;}
+.scrdown>p {font-size: 14px;color: #fff;writing-mode: vertical-rl;transform: rotate(180deg);text-transform: uppercase;margin-bottom: 20px;}
+.cpyright {position: absolute;bottom: 60px;left: 60px;color: #999898;font-size: 14px;}
+#fp-nav ul {row-gap: 10px;display: flex;flex-direction: column;}
+#fp-nav ul li {width: 24px;height: 24px;text-align: center !important;}
+#fp-nav ul li a span {width: 6px;height: 6px;margin: -2px 0 0 -2px;}
+#fp-nav ul li a.active span {width: 6px;height: 6px;margin: -2px 0 0 -2px;}
+#fp-nav.right {right: 60px !important;}
+#fullpage {width:100%;height:100%;}
+.section {width: 100%;height: 100%;box-sizing: border-box;}
+.section div.section_inner {
+  margin: 0 auto;
+  height: calc(100% - 120px);
+  width: calc(100% - 120px);
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+.cpyright {left: 40px;bottom: 40px;}
+
+
+
+
+/* section {position: relative;} */
+
+
+
+
+
+/* /////////// swiper 공통 속성 /////////// */
+.swiper-container {width: 100%;height: 100%;}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80% !important;  
+}
+
+
+
+
+
+
+/* /////////// header /////////// */
+header {
+    position: fixed;
+    top: 60px;
+    left: 60px;
+    width: calc(100% - 120px);
+    height: 60px;
+    z-index: 1000;
+    box-sizing: border-box;
+    line-height: 60px;
+}
+header nav {z-index: 1000;display: flex;justify-content: space-between;align-items: center;}
+header nav>h1 {display: table;}
+header nav>h1 a img {width: 200px;display: table-cell;vertical-align: middle;}
+header nav #menu {display: flex;justify-content: end;align-items: center;gap: 50px;}
+header nav #menu li a {
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(31, 31, 31,0.5);
+    font-size: 18px;
+    font-weight: 500;
+}
+header nav #menu li.active {border-bottom: 4px solid #171717;}
+header nav #menu li.active a {color: #1e1e1e;}
+
+  
+  
+  
+/* tablet & 큰 mobile 공통 */
+@media (min-width: 768px) and (max-width:1439.33px) {
+  header {
+    top: 40px;
+    left: 40px;
+    width: calc(100% - 80px);
+    height: 40px;
+    z-index: 1000;
+    box-sizing: border-box;
+    line-height: 40px;
+  }
+  header nav #menu {gap: 41px;}
+  header nav #menu li a {font-size: 16px;}
+
+}
+  
+
+
+/* mobile */
+@media (max-width:767.33px) {
+    header {
+        top: 28px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: 20px;
+        z-index: 1000;
+        box-sizing: border-box;
+        line-height: 20px;
+    }
+    header nav {flex-direction: column;gap: 20px;}
+    header nav #menu {gap: 41px;}
+    header nav #menu ul li a {font-size: 15px;}
+
+}
+
