@@ -30,7 +30,7 @@ $(document).ready(function() {
             $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
             $('#fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
             $('#fp-nav ul li').css({"border" : "none"});
-            $('#fp-nav ul li:nth-child(2)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+            $('#fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         } 
         // about us -> 메인
         else if (index == 2 && direction == 'up'){
@@ -43,7 +43,7 @@ $(document).ready(function() {
             $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
             $('#fp-nav ul li:nth-child(1) span').css({"background" : "#fff"});
             $('#fp-nav ul li').css({"border" : "none"});
-            $('#fp-nav ul li:nth-child(1)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
+            $('#fp-nav ul li:nth-child(1)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
         } 
 
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         }
         // services -> about us
         else if (index == 3 && direction == 'up'){
@@ -73,7 +73,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(2)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         }
 
 
@@ -89,7 +89,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(4) span').css({"background" : "#fff"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(4)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(4)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
         } 
         // contact -> services
         else if (index == 4 && direction == 'up'){
@@ -103,7 +103,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         } 
 
         // swiper.mousewheel.disable();
@@ -124,7 +124,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(1) span').css({"background" : "#fff"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(1)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(1)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
         } else {
           $('section .sec1 .ani_txt span').removeClass('animation')
           $('section .sec1 .swiperwrapper.swiper_txt span').removeClass('animation')
@@ -141,13 +141,20 @@ $(document).ready(function() {
 
           // 점선 애니메이션
           console.log("about us임")
-          $('.section.sec2 .rightImg>div.front').addClass('ani')
+          
+          // $('.section.sec2 .rightImg>div.front').addClass('ani')
+          setTimeout("ballAni()",500);
+          function ballAni() {
+            $('.section.sec2 .rightImg>div.front').addClass('ani');
+            // setTimeout($('.section.sec2 .rightImg>div.front').removeClass('ani'),1000);
+          }
+          $('.section.sec2 .rightImg>div.front').removeClass('ani')
 
           // pagination  
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(2)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         } else {
           $('section .sec2 .ani_txt span').removeClass('animation')
           $('header nav ul li:nth-child(2)').css({"border" : "none"})
@@ -165,7 +172,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         } else {
           $('header nav ul li:nth-child(3)').css({"border" : "none"})
         }
@@ -183,7 +190,7 @@ $(document).ready(function() {
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('#fp-nav ul li:nth-child(4) span').css({"background" : "#fff"});
           $('#fp-nav ul li').css({"border" : "none"});
-          $('#fp-nav ul li:nth-child(4)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
+          $('#fp-nav ul li:nth-child(4)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
         } else {
           $('header nav ul li:nth-child(4)').css({"border" : "none"})
         }
@@ -209,32 +216,28 @@ $(document).ready(function() {
         spaceBetween: 0,
         freeMode: false,
         speed: 700,
+        slideToClickedSlide : false,
         // pagination: {
         //     el: '.swiper-pagination',
         //     clickable: true,
         // },
         mousewheel: true,
         on: {
-          // slideChangeTransitionStart: function () {
-            
-          //   // $('.swiperwrapper').hide(0);
-          //   // $('.swiperwrapper').removeClass('aos-init').removeClass('aos-animate');
-          // },
+          slideChangeTransitionStart: function () {
+            $('.swiperwrapper').hide(0);
+            // $('.swiperwrapper').removeClass('aos-init').removeClass('aos-animate');
+          },
           // slideChangeTransitionEnd: function () {
           //   // $('.swiperwrapper').show(0);
           //   // AOS.init();
           // },
 
-          slideChange: function(){        
+          slideChange: function(){       
               var idx = this.activeIndex;
-              
-              
-              
               // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
-              if(this.activeIndex != 0 && idx != length) $.fn.fullpage.setAllowScrolling(false);
-              if(length == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
+              if(this.activeIndex != 0 && idx != length1) $.fn.fullpage.setAllowScrolling(false);
+              if(length1 == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
               // console.log('즉시 : ' + idx);
-           
           },  
           init: function () {
             var idx = this.activeIndex;
@@ -244,12 +247,24 @@ $(document).ready(function() {
               $('section .sec1 .swiperwrapper.swiper_txt span').addClass('animation')
             }
           },
+
           slideChangeTransitionEnd: function(){
             var idx = this.activeIndex;
-
             if(idx == 1) {
-              console.log("2팀")
-              $('section .sec1 .swiperwrapper.swiper_txt span').addClass('animation')
+              console.log("2탐")
+              $('.swiperwrapper').show(0);
+              gsap.from(".swiperwrapper", {
+                duration: 1,
+                opacity: 0,
+                yPercent: 100,
+                ease: 'back.out',
+                scrollTrigger: {
+                  trigger: ".swiperwrapper",
+                  start: "top 80%",
+                  markers: false,
+                }
+              });
+              setTimeout(() => $('section .sec1 .swiperwrapper.swiper_txt span').addClass('animation'), 1000);
               $('section .sec1 .ani_txt span').removeClass('animation')
             } else if(idx == 0) {
               $('section .sec1 .swiperwrapper.swiper_txt span').removeClass('animation')
@@ -258,9 +273,9 @@ $(document).ready(function() {
               console.log("다음 슬라이드 전환")
             }
 
-          if(idx == 0 || idx >= length-1) {
-            $.fn.fullpage.setAllowScrolling(true);
-          }
+            if(idx == 0 || idx >= length1-1) {
+              $.fn.fullpage.setAllowScrolling(true);
+            }
           
           // console.log('전환후 : ' + idx);     
           },
@@ -272,8 +287,56 @@ $(document).ready(function() {
           },100);        
           },
       }, 
-    });     
+    }); 
     
+    
+
+
+
+
+
+
+
+
+
+    // services swiper slide
+    var length2 = $(".mobilBoxcont .swiper-slide").length;
+    var swiper2 = new Swiper('.sec2Swiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: false,
+        autoplay : false,
+        mousewheel: true,
+        on: {
+          slideChange: function(){       
+              var idx = this.activeIndex;
+              // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
+              if(this.activeIndex != 0 && idx != length2) $.fn.fullpage.setAllowScrolling(false);
+              if(length == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
+              // console.log('즉시 : ' + idx);
+           
+          },  
+        }
+    });
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
 
 
 
