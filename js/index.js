@@ -143,12 +143,12 @@ $(document).ready(function() {
           console.log("about us임")
           
           // $('.section.sec2 .rightImg>div.front').addClass('ani')
-          setTimeout("ballAni()",500);
-          function ballAni() {
-            $('.section.sec2 .rightImg>div.front').addClass('ani');
-            // setTimeout($('.section.sec2 .rightImg>div.front').removeClass('ani'),1000);
-          }
-          $('.section.sec2 .rightImg>div.front').removeClass('ani')
+          // setTimeout("ballAni()",500);
+          // function ballAni() {
+          //   $('.section.sec2 .rightImg>div.front').addClass('ani');
+          //   // setTimeout($('.section.sec2 .rightImg>div.front').removeClass('ani'),1000);
+          // }
+          // $('.section.sec2 .rightImg>div.front').removeClass('ani')
 
           // pagination  
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
@@ -167,6 +167,7 @@ $(document).ready(function() {
           $('header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
           $('header nav ul li:nth-child(3)').css({"border-bottom" : "solid 4px #171717"})
+          $('section .sec3 .ani_txt span').addClass('animation')
 
           // pagination  
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
@@ -174,6 +175,7 @@ $(document).ready(function() {
           $('#fp-nav ul li').css({"border" : "none"});
           $('#fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
         } else {
+          $('section .sec3 .ani_txt span').removeClass('animation')
           $('header nav ul li:nth-child(3)').css({"border" : "none"})
         }
 
@@ -185,6 +187,7 @@ $(document).ready(function() {
           $('header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('header nav ul li:nth-child(4) a').css({"color" : "#fff"});
           $('header nav ul li:nth-child(4)').css({"border-bottom" : "solid 4px #fff"})
+          $('section .sec4 .ani_txt span').addClass('animation')
 
           // pagination  
           $('#fp-nav ul li a span').css({"background" : "#b2b2b2"});
@@ -192,13 +195,16 @@ $(document).ready(function() {
           $('#fp-nav ul li').css({"border" : "none"});
           $('#fp-nav ul li:nth-child(4)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
         } else {
+          $('section .sec4 .ani_txt span').removeClass('animation')
           $('header nav ul li:nth-child(4)').css({"border" : "none"})
         }
 
         if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
         if(swiper1) swiper1.mousewheel.enable();    
         // if(swiper2) swiper2.mousewheel.enable();    
+        // if(swiper2) swiper2.mousewheel.enable();    
         if(!$(".sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
+        if(!$(".sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
       },
       afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
 
@@ -209,7 +215,8 @@ $(document).ready(function() {
 
     });           
   
-    // swiper
+    
+    // main swiper
     var length1 = $(".sec1 .swiper-slide").length;
     var swiper1 = new Swiper('.sec1Swiper', {
         slidesPerView: 1,
@@ -217,27 +224,15 @@ $(document).ready(function() {
         freeMode: false,
         speed: 700,
         slideToClickedSlide : false,
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
         mousewheel: true,
         on: {
           slideChangeTransitionStart: function () {
             $('.swiperwrapper').hide(0);
-            // $('.swiperwrapper').removeClass('aos-init').removeClass('aos-animate');
           },
-          // slideChangeTransitionEnd: function () {
-          //   // $('.swiperwrapper').show(0);
-          //   // AOS.init();
-          // },
-
           slideChange: function(){       
               var idx = this.activeIndex;
-              // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
               if(this.activeIndex != 0 && idx != length1) $.fn.fullpage.setAllowScrolling(false);
-              if(length1 == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
-              // console.log('즉시 : ' + idx);
+              if(length1 == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) 
           },  
           init: function () {
             var idx = this.activeIndex;
@@ -272,12 +267,9 @@ $(document).ready(function() {
             } else if(idx !== 0 && idx !== 1) {
               console.log("다음 슬라이드 전환")
             }
-
             if(idx == 0 || idx >= length1-1) {
               $.fn.fullpage.setAllowScrolling(true);
             }
-          
-          // console.log('전환후 : ' + idx);     
           },
           touchMove: function(e) {        
           var startY = e.touches.startY;
@@ -293,30 +285,24 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
     // services swiper slide
-    var length2 = $(".mobilBoxcont .swiper-slide").length;
+    var length2 = $(".mobileBoxcont .swiper-slide").length;
     var swiper2 = new Swiper('.sec2Swiper', {
         slidesPerView: 1,
-        spaceBetween: 0,
         freeMode: false,
-        autoplay : false,
-        mousewheel: true,
-        on: {
-          slideChange: function(){       
-              var idx = this.activeIndex;
-              // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
-              if(this.activeIndex != 0 && idx != length2) $.fn.fullpage.setAllowScrolling(false);
-              if(length == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
-              // console.log('즉시 : ' + idx);
-           
-          },  
-        }
+        slideToClickedSlide: true,
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2, 
+          },
+        },
     });
 
 
