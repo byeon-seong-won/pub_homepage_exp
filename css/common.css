@@ -104,7 +104,7 @@ img{vertical-align:top;font-size:0;border:0;}
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 80% !important;  
+    height: 92% !important;  
 }
 
 
@@ -115,13 +115,13 @@ img{vertical-align:top;font-size:0;border:0;}
 /* /////////// header /////////// */
 header {
     position: fixed;
-    top: 60px;
+    top: 40px;
     left: 60px;
     width: calc(100% - 120px);
     height: 60px;
     z-index: 1000;
     box-sizing: border-box;
-    line-height: 60px;
+    /*line-height: 60px;*/
 }
 header nav {z-index: 1000;display: flex;justify-content: space-between;align-items: center;}
 header nav>h1 {display: table;}
@@ -137,12 +137,21 @@ header nav #menu li.active {border-bottom: 4px solid #171717;}
 header nav #menu li.active a {color: #1e1e1e;}
 
   
+
+/* sub 페이지 header */
+
+
+
+
+
+
+
   
   
 /* tablet & 큰 mobile 공통 */
 @media (min-width: 768px) and (max-width:1439.33px) {
   header {
-    top: 40px;
+    top: 20px;
     left: 40px;
     width: calc(100% - 80px);
     height: 40px;
@@ -173,4 +182,10 @@ header nav #menu li.active a {color: #1e1e1e;}
     header nav #menu ul li a {font-size: 15px;}
 
 }
+
+
+
+
+
+
 
