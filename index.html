@@ -19,9 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&   family=Oleo+Script:wght@400;700&family=Tangerine:wght@700&  display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="shortcut icon" href="img/favi.png">
+    <!-- <link rel="shortcut icon" href="img/favi.png"> -->
 </head>
-<body>
+<body class="index">
     <header>
         <nav>
             <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
@@ -34,6 +34,11 @@
         </nav>
     </header>
     <section>
+
+        <!-- top btn -->
+        <img src="img/idx_top.png" alt="topBtn" class="topBtn" onclick="location.href='index.html'">
+
+
         <div id="fullpage">
             
             <!-- section 01 -->
@@ -112,25 +117,9 @@
                     </div>
                 </div>
                 <div class="rightImg">
-                    <!--div>
-                        <div class="circle_line01">
-                            <img src="img/sec2_circle_front.png" alt="front">
-                            <img src="img/sec2_circle_back.png" alt="back">
-                        </div>
-                        <div class="circle_line02">
-                            <img src="img/sec2_circle_front.png" alt="front">
-                            <img src="img/sec2_circle_back.png" alt="back">
-                        </div>
-                        <div class="circle_line03">
-                            <img src="img/sec2_circle_front.png" alt="front">
-                            <img src="img/sec2_circle_back.png" alt="back" class="circle_1">
-                        </div>
-                        <div class="circle_line04">
-                            <img src="img/sec2_circle_front.png" alt="front">
-                            <img src="img/sec2_circle_back.png" alt="back">
-                        </div>
-                    </div-->
-                    <div class="front01 front"><img src="img/sec2_circle_front.png" alt="front"></div>
+
+                    <!-- 공 점선 -->
+                    <!-- <div class="front01 front"><img src="img/sec2_circle_front.png" alt="front"></div>
                     <div class="back01 back"><img src="img/sec2_circle_back.png" alt="back"></div>
 
                     <div class="front02 front"><img src="img/sec2_circle_front.png" alt="front"></div>
@@ -140,21 +129,10 @@
                     <div class="back03 back"><img src="img/sec2_circle_back.png" alt="back"></div>
 
                     <div class="front04 front"><img src="img/sec2_circle_front.png" alt="front"></div>
-                    <div class="back04 back"><img src="img/sec2_circle_back.png" alt="back"></div>
+                    <div class="back04 back"><img src="img/sec2_circle_back.png" alt="back"></div> -->
+                    <!-- /// 공 점선 -->
 
                     <img src="img/sec2_circle.png" alt="ballcircle" class="circle">
-
-                    <!-- <div class="scene">
-                        <div class="cube">
-                          <div class="cube__face cube__face--front"><img src="img/sec2_ball.png" alt="balimg"></div>
-                          <div class="cube__face cube__face--back"><img src="img/sec2_ball.png" alt="balimg"></div>
-                          <div class="cube__face cube__face--right"><img src="img/sec2_ball.png" alt="balimg"></div>
-                          <div class="cube__face cube__face--left"><img src="img/sec2_ball.png" alt="balimg"></div>
-                          <div class="cube__face cube__face--top"><img src="img/sec2_ball.png" alt="balimg"></div>
-                          <div class="cube__face cube__face--bottom"><img src="img/sec2_ball.png" alt="balimg"></div>
-                        </div>
-                    </div> -->
-
                     <img src="img/sec2_ball.png" alt="balimg" class="ball">
                 </div>
                 <p class="cpyright">Copyright © JAMONGLAB INC. All Rights Reserved.</p>
@@ -168,14 +146,19 @@
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                     </ul>
+                    
                     <div class="service_cont">
                         <!-- nomobile -->
                         <div class="nomobile_service">
                             <h2>Our Services</h2>
+                            <ul class="Icon">
+                                <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
+                                <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
+                                <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
+                            </ul>
                             <ul class="boxCont">
                                 <li>
-                                    <img src="img/plusIcon.png" alt="icon" class="plusIcon">
-                                    <div class="serviceBox">
+                                    <div class="serviceBox" onclick="location.href='every.html'">
                                         <img src="img/every.png" alt="serviceImg" class="serviceImg">
                                         <div>
                                             <img src="img/alpha01.png" alt="alpha01" class="letter">
@@ -191,8 +174,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="img/plusIcon.png" alt="icon" class="plusIcon">
-                                    <div class="serviceBox">
+                                    <div class="serviceBox" onclick="location.href='quiz.html'">
                                         <img src="img/quiz.png" alt="serviceImg" class="serviceImg">
                                         <div>
                                             <img src="img/alpha02.png" alt="alpha02" class="letter">
@@ -208,8 +190,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="img/plusIcon.png" alt="icon" class="plusIcon">
-                                    <div class="serviceBox">
+                                    <div class="serviceBox" onclick="location.href='news.html'">
                                         <img src="img/news.png" alt="serviceImg" class="serviceImg">
                                         <div>
                                             <img src="img/alpha03.png" alt="alpha03" class="letter">
@@ -230,10 +211,14 @@
                         <!-- mobile swiper slide -->
                         <div class="mobile_service">
                             <h2>Our Services</h2>
+                            <ul class="Icon">
+                                <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
+                                <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
+                                <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
+                            </ul>
                             <div class="swiper-container mobileBoxcont sec2Swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/plusIcon.png" alt="icon" class="plusIcon">
+                                    <div class="swiper-slide" onclick="location.href='every.html'">
                                         <div class="serviceBox">
                                             <img src="img/every.png" alt="serviceImg" class="serviceImg">
                                             <div>
@@ -241,16 +226,15 @@
                                                 <div class="service_text">
                                                     <h1>에브리클릭</h1>
                                                     <p>
-                                                        슬기로운 스마트폰 생활 <br>
-                                                        디지털 생활관리 리워드앱
+                                                        <span>슬기로운 스마트폰 생활</span><br>   
+                                                        <span>디지털 생활관리 리워드앱</span>
                                                     </p>
                                                     <button>View more <img src="img/service_arr.png" alt="arr"></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/plusIcon.png" alt="icon" class="plusIcon">
+                                    <div class="swiper-slide" onclick="location.href='quiz.html'">
                                         <div class="serviceBox">
                                             <img src="img/quiz.png" alt="serviceImg" class="serviceImg">
                                             <div>
@@ -258,16 +242,15 @@
                                                 <div class="service_text">
                                                     <h1>퀴즈클릭</h1>
                                                     <p>
-                                                        브랜드 인지도, 광고 효율과 사용자  <br>
-                                                        체류시간을 높이는 고효율 리워드 플랫폼
+                                                        <span>브랜드 인지도, 광고 효율과 사용자</span><br>
+                                                        <span>체류시간을 높이는 고효율 리워드 플랫폼</span>
                                                     </p>
                                                     <button>View more <img src="img/service_arr.png" alt="arr"></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/plusIcon.png" alt="icon" class="plusIcon">
+                                    <div class="swiper-slide" onclick="location.href='news.html'">
                                         <div class="serviceBox">
                                             <img src="img/news.png" alt="serviceImg" class="serviceImg">
                                             <div>
@@ -275,8 +258,8 @@
                                                 <div class="service_text">
                                                     <h1>뉴스클릭</h1>
                                                     <p>
-                                                        AI기반 사용자 맞춤형 뉴스 콘텐츠를   <br>
-                                                        제공하는큐레이션 플랫폼
+                                                        <span>AI기반 사용자 맞춤형 뉴스 콘텐츠를</span><br>
+                                                        <span>제공하는큐레이션 플랫폼</span>
                                                     </p>
                                                     <button>View more <img src="img/service_arr.png" alt="arr"></button>
                                                 </div>
@@ -284,10 +267,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div class="swiper-button-prev swiper-button"></div>
                                 <div class="swiper-button-next swiper-button"></div>
-                                
                             </div>
                         </div>
                     </div>
@@ -321,9 +302,10 @@
                                     <span>02-588-4568</span>
                                 </div>
                             </li>
-                            <li style="display: none;" class="mobileIcon">
+                            <li>&nbsp;</li>
+                            <!--li style="display: none;" class="mobileIcon">
                                 <img src="img/plusIcon.png" alt="icon" class="plusIcon">
-                            </li>
+                            </li-->
                         </ul>
                     </div>
                 </div>
