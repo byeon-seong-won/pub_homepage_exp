@@ -133,8 +133,8 @@ header nav #menu li a {
     font-size: 18px;
     font-weight: 500;
 }
-header nav #menu li.active {border-bottom: 4px solid #171717;}
-header nav #menu li.active a {color: #1e1e1e;}
+.index header nav #menu li.active {border-bottom: 4px solid #171717;}
+.index header nav #menu li.active a {color: #1e1e1e;}
 
   
 
