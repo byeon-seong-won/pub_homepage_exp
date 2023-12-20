@@ -14,9 +14,9 @@ section .ani_txt span,
 section .swiper_txt span {position: relative;}
 
 
-section .sec4 .ani_txt span::after,
-section .sec1 .swiperwrapper.swiper_txt span::after,
-section .ani_txt span::after {
+.index section .sec4 .ani_txt span::after,
+.index section .sec1 .swiperwrapper.swiper_txt span::after,
+.index section .ani_txt span::after {
   content: '';
   display: block;
   width: 100%;
@@ -29,11 +29,13 @@ section .ani_txt span::after {
   transform-origin: center;
 }
 
+.index section .sec1 .ani_txt span::after {height: 90%;}
+
 
 
 /* 메인 */
-section .sec1 .swiperwrapper.swiper_txt span.animation::after,
-section .sec1 .ani_txt span.animation::after {
+.index section .sec1 .swiperwrapper.swiper_txt span.animation::after,
+.index section .sec1 .ani_txt span.animation::after {
   -webkit-animation: block-disapper 0.8s ease;
   animation: block-disapper 0.8s ease;
   -webkit-animation-fill-mode: forwards;
@@ -41,11 +43,13 @@ section .sec1 .ani_txt span.animation::after {
 }
 
 
+
+
 /* 공통 */
-section .sec2.fp-completely .ani_txt {margin-top: 0;transition-delay: 0.8s;}
-section .sec3 .ani_txt, 
-section .sec2 .ani_txt,
-section .sec4 .ani_txt {
+.index section .sec2.fp-completely .ani_txt {margin-top: 0;transition-delay: 0.8s;}
+.index section .sec3 .ani_txt, 
+.index section .sec2 .ani_txt,
+.index section .sec4 .ani_txt {
   color: #fff;
   padding: 0;
   font-weight: 600;
@@ -53,19 +57,21 @@ section .sec4 .ani_txt {
   margin-bottom: 50px;
   margin-top: 250px;
   transition: all ease 1.2s;
+
+
 }
-section .sec4 .ani_txt  {margin-top: auto;}
-section .sec4 .ani_txt span.animation::after,
-section .sec3 .ani_txt span.animation::after,
-section .sec2 .ani_txt span.animation::after {
+.index section .sec4 .ani_txt  {margin-top: auto;}
+.index section .sec4 .ani_txt span.animation::after,
+.index section .sec3 .ani_txt span.animation::after,
+.index section .sec2 .ani_txt span.animation::after {
   -webkit-animation: block-disapper 0.7s ease;
   animation: block-disapper 0.7s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
-section .sec3 .ani_txt span::after,
-section .sec2 .ani_txt span::after {
+.index section .sec3 .ani_txt span::after,
+.index section .sec2 .ani_txt span::after {
   background-color: #000;
   -webkit-transform-origin: left center;
   transform-origin: left center;
@@ -78,7 +84,7 @@ section .sec2 .ani_txt span::after {
 }
 
 
-section .sec4 .ani_txt span.animation::after {
+.index section .sec4 .ani_txt span.animation::after {
     background-color: #fff;
     -webkit-transform-origin: left center;
     transform-origin: left center;
@@ -99,8 +105,8 @@ section .sec4 .ani_txt span.animation::after {
   padding: 0;
   font-weight: 600;
   text-align: left;
-  /* margin-bottom: 50px;
-  margin-top: 250px; */
+  margin-bottom: 50px;
+  margin-top: 250px;
   transition: all ease 1.2s;
 }
 
