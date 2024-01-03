@@ -217,10 +217,7 @@ $(document).ready(function() {
         $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
         $('.index section .sec3 .ani_txt span').addClass('animation')
 
-        if($(".index .sec3").hasClass("active")) {
-          $.fn.fullpage.setAllowScrolling(true); 
-          
-        }
+       
         
 
 
@@ -278,7 +275,10 @@ $(document).ready(function() {
       // if(!$(".sub .sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
       // if(!$(".sub .sec2").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
      
-
+      if($(".index .sec3").hasClass("active")) {
+        $.fn.fullpage.setAllowScrolling(true); 
+        
+      }
       if($(".sub .sec2").hasClass("active")) {
         swiper3.mousewheel.enable();
       }
