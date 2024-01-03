@@ -331,7 +331,7 @@ $(document).ready(function() {
             if(this.activeIndex != 0 && idx != length1) $.fn.fullpage.setAllowScrolling(false);
             if(idx == 0) {
               $.fn.fullpage.setAllowScrolling(false)
-              $('#fullpage').off('touchmove');  
+               
             }
         },  
         init: function () {
@@ -343,9 +343,11 @@ $(document).ready(function() {
           if(idx == 0) {
             $('.index section .sec1 .ani_txt span').addClass('animation')
             $.fn.fullpage.setAllowScrolling(false);
-          } else if(idx !== 0) {
-            $.fn.fullpage.setAllowScrolling(true);
-          }
+            $('#fullpage').off('touchmove'); 
+          } 
+          // else if(idx !== 0) {
+          //   $.fn.fullpage.setAllowScrolling(true);
+          // }
         },
 
         slideChangeTransitionEnd: function(){
