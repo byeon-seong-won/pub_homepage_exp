@@ -421,9 +421,8 @@ $(document).ready(function() {
   // var length2 = $(".mobileBoxcont .swiper-slide").length;
   
   var length2 = $(".mobileBoxcont .swiper-slide").length;
-
   var swiper2 = new Swiper('.index .sec2Swiper', {
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       freeMode: false,
       slideToClickedSlide: true,
       grabCursor: true,
@@ -434,11 +433,18 @@ $(document).ready(function() {
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        529.33: {
+        560.33: {
           slidesPerView: 2, 
         },
       },
+    
+      on: {
+        slideChange: function(){       
+          $.fn.fullpage.setAllowScrolling(true) 
+        }, 
+      }
   });
+
 
 
 
