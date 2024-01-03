@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({         
     anchors: ['sec1', 'sec2', 'sec3', 'sec4'],
     menu: '#menu',
-    scrollingSpeed: 700,
+    scrollingSpeed: 1000,
     navigation: true,
     // responsiveWidth: 1025,
     navigationPosition: 'right',
@@ -238,6 +238,7 @@ $(document).ready(function() {
           
             on: {
               init: function () {
+                console.log("시작시작")
                 $.fn.fullpage.setAllowScrolling(true)  
               },
               slideChange: function(){       
@@ -306,7 +307,7 @@ $(document).ready(function() {
       if($(".sub .sec2").hasClass("active")) {
         swiper3.mousewheel.enable();
       }
-      if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
+      // if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
     },
 
   });           
