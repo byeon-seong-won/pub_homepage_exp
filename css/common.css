@@ -73,9 +73,9 @@ img{vertical-align:top;font-size:0;border:0;}
 .cpyright {position: absolute;bottom: 60px;left: 60px;color: #999898;font-size: 14px;}
 #fp-nav ul {row-gap: 10px;display: flex;flex-direction: column;}
 #fp-nav ul li {width: 24px;height: 24px;text-align: center !important;}
-#fp-nav ul li a span {width: 6px;height: 6px;margin: -2px 0 0 -2px;}
-#fp-nav ul li a.active span {width: 6px;height: 6px;margin: -2px 0 0 -2px;}
-#fp-nav.right {right: 60px !important;}
+#fp-nav ul li a span {width: 6px;height: 6px;margin: 0 !important;transform: translate(-50%,-50%) !important;}
+#fp-nav ul li a.active span {width: 6px;height: 6px;margin: 0 !important;}
+#fp-nav.right {right: 40px;}
 #fullpage {width:100%;height:100%;}
 .section {width: 100%;height: 100%;box-sizing: border-box;}
 .section div.section_inner {
@@ -132,6 +132,8 @@ header nav #menu li a {
     color: rgba(31, 31, 31,0.5);
     font-size: 18px;
     font-weight: 500;
+    padding-bottom: 8px;
+    display: inline-block;
 }
 .index header nav #menu li.active {border-bottom: 4px solid #171717;}
 .index header nav #menu li.active a {color: #1e1e1e;}
@@ -149,7 +151,7 @@ header nav #menu li a {
   
   
 /* tablet & 큰 mobile 공통 */
-@media (min-width: 768px) and (max-width:1439.33px) {
+@media (max-width:1024px) {
   header {
     top: 20px;
     left: 40px;
@@ -160,14 +162,22 @@ header nav #menu li a {
     line-height: 40px;
   }
   header nav #menu {gap: 41px;}
-  header nav #menu li a {font-size: 16px;}
+  header nav #menu li a {font-size: 16px;padding-bottom: 0;}
 
+  header nav>h1 a img{width:160px;}
+  #fp-nav.right{
+    right:30px;
+  }
+  .scrdown {right:20px;}
+  #fp-nav.right{
+    display:none;
+  }
 }
   
 
 
 /* mobile */
-@media (max-width:767.33px) {
+@media (max-width:560px) {
     header {
         top: 28px;
         left: 20px;
@@ -178,8 +188,10 @@ header nav #menu li a {
         line-height: 20px;
     }
     header nav {flex-direction: column;gap: 20px;}
-    header nav #menu {gap: 41px;}
+    header nav #menu {gap: 41px; display:none;}
     header nav #menu ul li a {font-size: 15px;}
+    
+   
 
 }
 
