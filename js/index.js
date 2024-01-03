@@ -92,6 +92,10 @@ $(document).ready(function() {
         $('.index #fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
         $('.index #fp-nav ul li').css({"border" : "none"});
         $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+        if($(".index .sec3").hasClass("active")) {
+          initSwiper();
+          $.fn.fullpage.setAllowScrolling(true)  
+        }
       }
       // services -> about us
       else if (index == 3 && direction == 'up'){
@@ -106,6 +110,11 @@ $(document).ready(function() {
         $('.index #fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
         $('.index #fp-nav ul li').css({"border" : "none"});
         $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+        if($(".index .sec3").hasClass("active")) {
+          initSwiper();
+          $.fn.fullpage.setAllowScrolling(true)  
+        }
+
       }
 
 
@@ -122,6 +131,10 @@ $(document).ready(function() {
         $('.index #fp-nav ul li:nth-child(4) span').css({"background" : "#fff"});
         $('.index #fp-nav ul li').css({"border" : "none"});
         $('.index #fp-nav ul li:nth-child(4)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
+        if($(".index .sec3").hasClass("active")) {
+          initSwiper();
+          $.fn.fullpage.setAllowScrolling(true)  
+        }
       } 
       // contact -> services
       else if (index == 4 && direction == 'up'){
@@ -136,6 +149,10 @@ $(document).ready(function() {
         $('.index #fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
         $('.index #fp-nav ul li').css({"border" : "none"});
         $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+        if($(".index .sec3").hasClass("active")) {
+          initSwiper();
+          $.fn.fullpage.setAllowScrolling(true)  
+        }
       } 
 
       // swiper.mousewheel.disable();
@@ -216,10 +233,7 @@ $(document).ready(function() {
         $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
         $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
         $('.index section .sec3 .ani_txt span').addClass('animation')
-        if($(".index .sec3").hasClass("active")) {
-          initSwiper();
-          $.fn.fullpage.setAllowScrolling(true)  
-        }
+        
 
 
         // pagination  
