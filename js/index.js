@@ -419,6 +419,7 @@ $(document).ready(function() {
   
   // services swiper slide
   // var length2 = $(".mobileBoxcont .swiper-slide").length;
+  
   function initSwiper() { 
     var screenWidth = $(window).width();
 
@@ -428,6 +429,7 @@ $(document).ready(function() {
         freeMode: false,
         slideToClickedSlide: true,
         grabCursor: true,
+        allowTouchMove : true,
         observer: true,
         observeParents: true,
         navigation: {
@@ -451,6 +453,8 @@ $(document).ready(function() {
   $(window).on('resize', function(){
       initSwiper();
   }); 
+
+
 
 
 
