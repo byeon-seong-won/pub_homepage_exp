@@ -1,11 +1,13 @@
 
-
 $(document).ready(function() {
+
+
 
     /* TOP버튼 */
     $(".topBtn").click(function() {
       $("html,body").animate({scrollTop:"0"});    /*  자연스럽게 올라감 */
     })
+
 
     // fullpage
     $('#fullpage').fullpage({         
@@ -15,6 +17,7 @@ $(document).ready(function() {
       navigation: true,
       // responsiveWidth: 1025,
       navigationPosition: 'right',
+ 
       // navigationTooltips: ['Top Tier', 'Middle Tier', 'Bottom Tier'],
       // easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
       onLeave: function(index, nextIndex, direction) {
@@ -22,8 +25,9 @@ $(document).ready(function() {
           event.preventDefault();
           event.stopPropagation();
           return false;
-        },
-        )
+        });
+       
+        
 
         // 메인 -> about us
         if (index == 1 && direction == 'down'){
@@ -33,16 +37,20 @@ $(document).ready(function() {
             $('.sub header nav h1 a img').attr("src", "../img/logo_black.png")
             $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
             $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
-            $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 4px #171717"})
+            $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
             // pagination  
             $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
             $('.index #fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
             $('.index #fp-nav ul li').css({"border" : "none"});
-            $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
-           
+            $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
+       
+            $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+            $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+            $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
         } 
         // about us -> 메인
         else if (index == 2 && direction == 'up'){
+          
             // header
             $('.index header nav h1 a img').attr("src", "../img/logo.png")
             //$('.sub .topBtn').attr("src", "../img/logo.png")
@@ -54,9 +62,20 @@ $(document).ready(function() {
             $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
             $('.index #fp-nav ul li:nth-child(1) span').css({"background" : "#fff"});
             $('.index #fp-nav ul li').css({"border" : "none"});
-            $('.index #fp-nav ul li:nth-child(1)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
+            $('.index #fp-nav ul li:nth-child(1)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
             console.log("서브 메인으로!!")
-            swiper3.mousewheel.disable();
+            // swiper3.mousewheel.disable();
+            
+
+            if($(".index .sec2").hasClass("active")) {
+              swiper1.slideTo(0);
+            }
+            if($(".sub .sec2").hasClass("active")) {
+              swiper4.slideTo(0);
+            }
+
+            // swiper1.slideTo(0);
+
         } 
 
 
@@ -66,13 +85,13 @@ $(document).ready(function() {
           $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
-          $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 4px #171717"})
+          $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index header nav ul li:nth-child(2)').css({"border" : "none"});
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
         }
         // services -> about us
         else if (index == 3 && direction == 'up'){
@@ -80,13 +99,13 @@ $(document).ready(function() {
           $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
-          $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 4px #171717"})
+          $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index header nav ul li:nth-child(3)').css({"border" : "none"});
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
         }
 
 
@@ -96,13 +115,13 @@ $(document).ready(function() {
           $('.index header nav h1 a img').attr("src", "../img/logo.png")
           $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('.index header nav ul li:nth-child(4) a').css({"color" : "#fff"});
-          $('.index header nav ul li:nth-child(4)').css({"border-bottom" : "solid 4px #fff"})
+          $('.index header nav ul li:nth-child(4)').css({"border-bottom" : "solid 0.25rem #fff"})
           $('.index header nav ul li:nth-child(3)').css({"border" : "none"});
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(4) span').css({"background" : "#fff"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(4)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(4)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
         } 
         // contact -> services
         else if (index == 4 && direction == 'up'){
@@ -110,13 +129,13 @@ $(document).ready(function() {
           $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
-          $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 4px #171717"})
+          $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index header nav ul li:nth-child(4)').css({"border" : "none"});
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
         } 
 
         // swiper.mousewheel.disable();
@@ -128,6 +147,7 @@ $(document).ready(function() {
 
         // 메인 애니메이션
         if(index == 1) {
+          
           // header
           $('.index header nav h1 a img').attr("src", "../img/logo.png")
           $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
@@ -138,11 +158,16 @@ $(document).ready(function() {
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(1) span').css({"background" : "#fff"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(1)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(1)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
           $('.sub .topBtn').attr("src", "../img/top_btn_white.png")
+          $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')
+          $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+          $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+          $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+          $('.index section .sec1 .ani_txt span').addClass('animation')
         } else {
+     
           $('.index section .sec1 .ani_txt span').removeClass('animation')
-          // $('.index section .sec1 .swiperwrapper.swiper_txt span').removeClass('animation')
         }
 
         // about us 텍스트 애니메이션
@@ -152,36 +177,35 @@ $(document).ready(function() {
           $('.sub header nav ul li a').css({"color" : "rgba(0,0,0,0.5)"});
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
-          $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 4px #171717"})
+          $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index section .sec2 .ani_txt span').addClass('animation')
           $('.sub .topBtn').attr("src", "../img/sub_top.png")
-
           $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
 
-         
-          // 점선 애니메이션
+
           console.log("about us임")
-          // swiper3.mousewheel.enable();
-          
-          // $('.section.sec2 .rightImg>div.front').addClass('ani')
-          // setTimeout("ballAni()",500);
-          // function ballAni() {
-          //   $('.section.sec2 .rightImg>div.front').addClass('ani');
-          //   // setTimeout($('.section.sec2 .rightImg>div.front').removeClass('ani'),1000);
-          // }
-          // $('.section.sec2 .rightImg>div.front').removeClass('ani')
+          $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+          $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+          $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
 
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(2) a span').css({"background" : "#000"});
           $('.index #fp-nav ul li').css({"border" : "none"});
           $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
-          $('.sub section .sec2 .ani_txt.ani_txt_fix span').addClass('animation')
+          $('.sub section .sec2 .ani_txt.ani_txt_fix span').addClass('animation');
+          
+
+
+
         } else {
           $('.index section .sec2 .ani_txt span').removeClass('animation')
           $('.index header nav ul li:nth-child(2)').css({"border" : "none"})
           $('.sub section .sec2 .ani_txt.ani_txt_fix span').removeClass('animation')
           $('.sub section .sec2 .ani_txt.ani_txt_fix span').removeClass('animation')
+          $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+          $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+          $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
         }
 
 
@@ -190,14 +214,23 @@ $(document).ready(function() {
           $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
-          $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 4px #171717"})
+          $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index section .sec3 .ani_txt span').addClass('animation')
+
+          if($(".index .sec3").hasClass("active")) {
+            $.fn.fullpage.setAllowScrolling(true); 
+          }
+          
+
+
+          
+
 
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(3)').css({"border" : "solid 0.1rem #000", "border-radius" : "50%"});
         } else {
           $('.index section .sec3 .ani_txt span').removeClass('animation')
           $('.index header nav ul li:nth-child(3)').css({"border" : "none"})
@@ -210,14 +243,14 @@ $(document).ready(function() {
           $('.index header nav h1 a img').attr("src", "../img/logo.png")
           $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('.index header nav ul li:nth-child(4) a').css({"color" : "#fff"});
-          $('.index header nav ul li:nth-child(4)').css({"border-bottom" : "solid 4px #fff"})
+          $('.index header nav ul li:nth-child(4)').css({"border-bottom" : "solid 0.25rem #fff"})
           $('.index section .sec4 .ani_txt span').addClass('animation')
 
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(4) span').css({"background" : "#fff"});
           $('.index #fp-nav ul li').css({"border" : "none"});
-          $('.index #fp-nav ul li:nth-child(4)').css({"border" : "solid 0.13rem #fff", "border-radius" : "50%"});
+          $('.index #fp-nav ul li:nth-child(4)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
           $('.index .topBtn').css({"display" : "block"})
         } else {
           $('.index section .sec4 .ani_txt span').removeClass('animation')
@@ -226,6 +259,7 @@ $(document).ready(function() {
         }
 
         if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
+
         // if(swiper1) swiper1.mousewheel.enable();    
         // if(swiper4) swiper4.mousewheel.enable();    
         // if(swiper3)swiper3.mousewheel.enable();
@@ -235,18 +269,19 @@ $(document).ready(function() {
         
 
         // if(swiper2) swiper2.mousewheel.enable();    
-        if(!$(".index .sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
-        if(!$(".sub .sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
-        if(!$(".sub .sec2").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
+
+        
+        // if($(".index .sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(false);
+        // if(!$(".index .sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
+
+        // if(!$(".sub .sec1").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
+        // if(!$(".sub .sec2").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
+        
         if($(".sub .sec2").hasClass("active")) {
           swiper3.mousewheel.enable();
         }
-        if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
+        // if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
       },
-      afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-
-        console.log("현재 슬라이드 번호는?" + (+ slideIndex + 1));
-      }
 
     });           
 
@@ -263,10 +298,16 @@ $(document).ready(function() {
         spaceBetween: 0,
         freeMode: false,
         speed: 700,
-        slideToClickedSlide : false,
+        slideToClickedSlide : true,
         mousewheel: true,
         direction: "vertical",
-        allowTouchMove : false,
+        allowTouchMove : true,
+        breakpoints: {
+          1439.33: {
+            slideToClickedSlide : false,  //브라우저가 1439.33보다 클 때
+            allowTouchMove : false,
+          },
+        },
         on: {
           slideChangeTransitionStart: function () {
             $('.swiperwrapper').hide(0);
@@ -274,20 +315,24 @@ $(document).ready(function() {
           slideChange: function(){       
               var idx = this.activeIndex;
               if(this.activeIndex != 0 && idx != length1) $.fn.fullpage.setAllowScrolling(false);
-              if(length1 == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) 
+              if(length1 == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
+
           },  
           init: function () {
+       
             var idx = this.activeIndex;
             if(idx == 0) {
-              console.log("에브리클릭 노출")
               $('.index section .sec1 .ani_txt span').addClass('animation')
+              $.fn.fullpage.setAllowScrolling(false);
+            } else if(idx !== 0) {
+              $.fn.fullpage.setAllowScrolling(true);
             }
           },
 
           slideChangeTransitionEnd: function(){
             var idx = this.activeIndex;
+
             if(idx == 1) {
-              console.log("2탐")
               $('.swiperwrapper').show(0);
               gsap.from(".swiperwrapper", {
                 duration: 1,
@@ -308,10 +353,11 @@ $(document).ready(function() {
               console.log("에클 1슬라이드")
               $('.index section .sec1 .swiperwrapper.swiper_txt span').removeClass('animation')
               $('.index section .sec1 .ani_txt span').addClass('animation')
+              
             } else if(idx !== 0 && idx !== 1) {
               console.log("다음 슬라이드 전환")
             }
-            if(idx == 0 || idx >= length1-1) {
+            if(idx >= length1-1) {
               $.fn.fullpage.setAllowScrolling(true);
             }
           },
@@ -352,6 +398,8 @@ $(document).ready(function() {
 
 
 
+
+
     //sub 메인 swiper
     var length4 = $(".sub .sec1 .swiper-slide").length;
     var swiper4 = new Swiper('.sub .sec1Swiper', {
@@ -359,25 +407,29 @@ $(document).ready(function() {
         spaceBetween: 0,
         freeMode: false,
         speed: 700,
-        slideToClickedSlide : false,
+        slideToClickedSlide : true,
         mousewheel: true,
-        allowTouchMove : false,
         direction: "vertical",
+        allowTouchMove : true,
+        breakpoints: {
+          1439.33: {
+            slideToClickedSlide : false,  //브라우저가 1439.33보다 클 때
+            allowTouchMove : false,
+          },
+        },
         on: {
           slideChange: function(){       
               var idx = this.activeIndex;
-              if(this.activeIndex != 0 && idx != length4) {
-               
-                $.fn.fullpage.setAllowScrolling(false);
-              }
-              if(length4 == 2 && idx == 0) {
-                $.fn.fullpage.setAllowScrolling(false) 
-              } 
+              if(this.activeIndex != 0 && idx != length4) $.fn.fullpage.setAllowScrolling(false);
+              if(length4 == 2 && idx == 0) $.fn.fullpage.setAllowScrolling(false) //슬라이드가 2개밖에 없을때
           },  
           init: function () {
             var idx = this.activeIndex;
             if(idx == 0) {
               setTimeout(() => $('.sub section .sec1 .ani_txt span').addClass('animation'), 500);
+              $.fn.fullpage.setAllowScrolling(false);
+            } else if(idx !== 0) {
+              $.fn.fullpage.setAllowScrolling(true);
             }
           },
 
@@ -395,17 +447,18 @@ $(document).ready(function() {
             } else if(idx !== 0 && idx !== 1) {
               console.log("다음 슬라이드 전환")
             }
-            if(idx == 0 || idx >= length4-1) {
+            if(idx >= length4-1) {
+
               $.fn.fullpage.setAllowScrolling(true);
             }
           },
-          touchMove: function(e) {        
-          var startY = e.touches.startY;
-          setTimeout(function(){
-            if(startY > e.touches.currentY) swiper4.slideNext();  
-            else swiper4.slidePrev();
-          },100);        
-          },
+          // touchMove: function(e) {        
+          // var startY = e.touches.startY;
+          // setTimeout(function(){
+          //   if(startY > e.touches.currentY) swiper4.slideNext();  
+          //   else swiper4.slidePrev();
+          // },100);        
+          // },
       }, 
     }); 
 
@@ -432,11 +485,18 @@ $(document).ready(function() {
         spaceBetween: 0,
         freeMode: false,
         speed: 1000,
-        slideToClickedSlide : false,
+        slideToClickedSlide : true,
         mousewheel: true,
         direction: "vertical",
-        allowTouchMove : false,
-        touchRatio: 0,//드래그 금지
+        allowTouchMove : true,
+        breakpoints: {
+          1439.33: {
+            slideToClickedSlide : false,  //브라우저가 1439.33보다 클 때
+            allowTouchMove : false,
+            touchRatio: 0
+          },
+        },
+  
         on: {
           slideChange: function(){       
               var idx = this.activeIndex;
@@ -451,6 +511,27 @@ $(document).ready(function() {
               }
               if(idx == 0) {
                 console.log("마우스휠방지")
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+              }
+              if(idx == 1) {
+                console.log("서브 1")
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              } if(idx == 2) {
+                console.log("서브3")
+                $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              } else if (idx == 3) {
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+                $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img').addClass('ani')
               }
           },  
           init: function () {
@@ -462,6 +543,7 @@ $(document).ready(function() {
               $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt02 span').removeClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt03 span').removeClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt04 span').removeClass('animation')
             } 
           },
           // slideChangeTransitionStart: function () {
@@ -482,34 +564,54 @@ $(document).ready(function() {
               $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt02 span').removeClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt03 span').removeClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt04 span').removeClass('animation')
+              $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
             } else if(idx == 1) {
               console.log("2번째 슬라이드")
               $('.sub section .sec2 .ani_txt.ani_txt02 span').addClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt03 span').removeClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt04 span').removeClass('animation')
+              $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
             } else if(idx == 2) {
               console.log("3번째 슬라이드")
               $('.sub section .sec2 .ani_txt.ani_txt03 span').addClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt02 span').removeClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt04 span').removeClass('animation')
+              $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+            } else if (idx == 3) {
+              $('.sub section .sec2 .ani_txt.ani_txt04 span').addClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt02 span').removeClass('animation')
+              $('.sub section .sec2 .ani_txt.ani_txt03 span').removeClass('animation')
             }
             else if(idx !== 0 && idx !== 1) {
               console.log("다음 슬라이드 전환")
             }
-            if(idx == 0 || idx >= length3-1) {
-              $.fn.fullpage.setAllowScrolling(true);
-            } else if(!(idx == 0 || idx >= length3-1)) {
+            if(idx >= length3-1) {
               $.fn.fullpage.setAllowScrolling(false);
-
+            } 
+            if(idx == 0) {
+              $.fn.fullpage.setAllowScrolling(true);
             }
+            // else if(!(idx == 0 || idx >= length3-1)) {
+            //   $.fn.fullpage.setAllowScrolling(false);
+            // }
           },
-          touchMove: function(e) {        
-          var startY = e.touches.startY;
-          setTimeout(function(){
-            if(startY > e.touches.currentY) swiper3.slideNext();  
-            else swiper3.slidePrev();
-          },100);        
-          },
+          // touchMove: function(e) {        
+          // var startY = e.touches.startY;
+          // setTimeout(function(){
+          //   if(startY > e.touches.currentY) swiper3.slideNext();  
+          //   else swiper3.slidePrev();
+          // },100);        
+          // },
       }, 
     }); 
 
@@ -519,95 +621,15 @@ $(document).ready(function() {
       swiper1.slideTo(0);
     })
 
-
   
+
+
+
+    
 
     });
 
   
-
-
-    // 인트로 - 메인 효과
-    // $(function() {
-
-    //   // 스크롤 막기
-    //   $('body').on('scroll touchmove mousewheel', function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation(); 
-    //     return false;
-    //   })
-  
-    //   var perNum = 100;
-    //   $('.second.circle').circleProgress({
-    //     value: perNum/100,
-    //     startAngle:300,
-    //     size:200,
-    //     fill:{
-    //       gradient:["#37FF8B","#37FF8B"],
-    //       // gradient:["#14bab8","#37FF8B","#32d2b5","#14bab8","#37FF8B","#32d2b5"],
-    //       gradientAngle: Math.PI / 2
-    //     },
-    //     animation:{
-    //       duration:2200,
-    //       easing:"swing"
-    //     },
-    //     lineCap : "round",
-    //     reverse:true
-              
-    //     }).on('circle-animation-progress', function(event, progress) {
-    //           $(".second.circle>canvas").css({"box-shadow" : "20px 20px 60px #166638, -20px -20px 60px #58ffde," })
-    //           $(this).find('.perc').html(Math.round(perNum * progress) + '<span>%</span>');
-    //           setTimeout("startAni()", 2300);  
-    //           setTimeout("showMain()", 3700);
-    //   })
-    // });
-
-    // 문구 애니메이션
-    // function startAni() {
-    //   $(".hover-text").addClass('active')
-    // };
-
-    // 메인페이지 등장
-    // function showMain() {
-    //   $(".notice").css({"opacity" : "0"})
-    //   $(".curtain__panel--left").css({"transform":"translateX(-100%)"});
-    //   $(".curtain__panel--right").css({"transform":"translateX(100%)"});
-
-    //   // 스크롤 풀기
-    //   $('body').off('scroll touchmove mousewheel'); 
-    // };
-      
-
-
-
-
-
-    // slick slider
-    // $('.slickslider01').slick({
-    //   infinite: true,
-    //   slidesToShow: 5,
-    //   slidesToScroll: 1,
-    //   speed: 300,
-    //   dots: true,
-    //   autoplay: true,     
-    //   autoplaySpeed: 2000
-    // });
-    // $('.slickslider02').slick({
-    //   infinite: true,
-    //   slidesToShow: 5,
-    //   slidesToScroll: 1,
-    //   speed: 300,
-    //   dots: true,
-    //   autoplay: true,     
-    //   autoplaySpeed: 2000
-    // });
-    
-
-  
-
-
-
-
 
 
   // 브라우저 resize 처리
