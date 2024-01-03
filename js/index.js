@@ -77,13 +77,13 @@ $(document).ready(function() {
           // swiper1.slideTo(0);
 
       } 
-      else if (nextIndex == 3) {
-        console.log("fullpage services 진입")
-        if($(".index .sec3").hasClass("active")) {
-          initSwiper();
-          $.fn.fullpage.setAllowScrolling(true); 
-        }
-      }
+      // else if (nextIndex == 3) {
+      //   console.log("fullpage services 진입")
+      //   if($(".index .sec3").hasClass("active")) {
+      //     initSwiper();
+          
+      //   }
+      // }
 
 
       // about us -> services
@@ -223,9 +223,9 @@ $(document).ready(function() {
         $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
         $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
         $('.index section .sec3 .ani_txt span').addClass('animation')
-        // if($(".index .sec3").hasClass("active")) {
-        //   initSwiper();
-        // } 
+        if($(".index .sec3").hasClass("active")) {
+          $.fn.fullpage.setAllowScrolling(true); 
+        } 
         
        
 
@@ -375,6 +375,38 @@ $(document).ready(function() {
 
   
   // services swiper slide
+  var length2 = $(".mobileBoxcont .swiper-slide").length;
+  var swiper2 = new Swiper('.index .sec2Swiper', {
+      slidesPerView: "auto",
+      freeMode: false,
+      slideToClickedSlide: true,
+      grabCursor: true,
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        560.33: {
+          slidesPerView: 2, 
+        },
+      },
+    
+      on: {
+        slideChangeTransitionStart: function () {
+          console.log("swiper 시작")
+          $.fn.fullpage.setAllowScrolling(true) 
+        },
+        slideChange: function(){       
+          $.fn.fullpage.setAllowScrolling(true) 
+        }, 
+      }
+  });
+
+
+
+
   // var length2 = $(".mobileBoxcont .swiper-slide").length;
   // var swiper2 = new Swiper('.index .sec2Swiper', {
   //     slidesPerView: "auto",
@@ -394,48 +426,13 @@ $(document).ready(function() {
   //     },
     
   //     on: {
-  //       slideChangeTransitionStart: function () {
-  //         console.log("swiper 시작")
-  //         $.fn.fullpage.setAllowScrolling(true) 
-  //       },
+
   //       slideChange: function(){       
   //         $.fn.fullpage.setAllowScrolling(true) 
   //       }, 
   //     }
   // });
-
-
-
-  function initSwiper() {
-    // var length2 = $(".mobileBoxcont .swiper-slide").length;
-    var swiper2 = new Swiper('.index .sec2Swiper', {
-        slidesPerView: "auto",
-        freeMode: false,
-        slideToClickedSlide: true,
-        grabCursor: true,
-        observer: true,
-        observeParents: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          560.33: {
-            slidesPerView: 2, 
-          },
-        },
-      
-        on: {
-          // init: function () {
-          //   console.log("시작시작")
-          //   $.fn.fullpage.setAllowScrolling(true)  
-          // },
-          slideChange: function(){       
-            $.fn.fullpage.setAllowScrolling(true) 
-          }, 
-        }
-    });
-  }
+  
   
 
 
