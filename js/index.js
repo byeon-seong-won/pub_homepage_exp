@@ -422,7 +422,8 @@ $(document).ready(function() {
             console.log("시작시작")
             $.fn.fullpage.setAllowScrolling(true)  
           },
-          slideChange: function(){       
+          slideChange: function(){    
+            console.log("swiper 실행중")   
             $.fn.fullpage.setAllowScrolling(true) 
           }, 
         }
