@@ -219,7 +219,9 @@ $(document).ready(function() {
         if($(".index .sec3").hasClass("active")) {
           initSwiper();
         }
-
+        if($(".index .sec3").hasClass("active")) {
+          $.fn.fullpage.setAllowScrolling(true); 
+        }
         
 
         // pagination  
@@ -428,9 +430,7 @@ $(document).ready(function() {
   }
   
 
-  if($(".index .sec3").hasClass("active")) {
-    $.fn.fullpage.setAllowScrolling(true); 
-  }
+ 
        
 
 
