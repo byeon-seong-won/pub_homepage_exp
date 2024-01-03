@@ -170,7 +170,7 @@
 }
 .mainMt {
   width: 100%;
-  height: 30vh;
+  height: 100%;
   position: absolute;
   bottom: 0;
   z-index: 1000;
