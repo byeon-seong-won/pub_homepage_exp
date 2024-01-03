@@ -47,7 +47,10 @@ $(document).ready(function() {
           $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
           $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
           $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
-      } 
+      
+
+      
+        } 
       // about us -> 메인
       else if (index == 2 && direction == 'up'){
         
@@ -171,7 +174,14 @@ $(document).ready(function() {
         $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
         $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
         $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
-        $('.index section .sec1 .ani_txt span').addClass('animation')
+        $('.index section .sec1 .ani_txt span').addClass('animation');
+
+        // console.log("mainmainmain")
+        // if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
+        
+
+
+
       } else {
    
         $('.index section .sec1 .ani_txt span').removeClass('animation')
@@ -267,7 +277,7 @@ $(document).ready(function() {
       // if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
 
 
-      
+
       // if(swiper1) swiper1.mousewheel.enable();    
       // if(swiper4) swiper4.mousewheel.enable();    
       // if(swiper3)swiper3.mousewheel.enable();
@@ -328,7 +338,6 @@ $(document).ready(function() {
 
         },  
         init: function () {
-     
           var idx = this.activeIndex;
           if(idx == 0) {
             $('.index section .sec1 .ani_txt span').addClass('animation')
