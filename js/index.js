@@ -216,7 +216,7 @@ $(document).ready(function() {
         $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
         $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
         $('.index section .sec3 .ani_txt span').addClass('animation')
-        $.fn.fullpage.setAllowScrolling(true);
+        if($(".index .sec3").hasClass("active") || !($(".index .sec3").hasClass("active"))) $.fn.fullpage.setAllowScrolling(true);
         
 
 
