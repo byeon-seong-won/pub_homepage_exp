@@ -216,7 +216,9 @@ $(document).ready(function() {
         $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
         $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
         $('.index section .sec3 .ani_txt span').addClass('animation')
-
+        if($(".index .sec3").hasClass("active")) {
+          initSwiper();
+        }
 
         
 
@@ -394,35 +396,37 @@ $(document).ready(function() {
 
 
 
-
-  var length2 = $(".mobileBoxcont .swiper-slide").length;
-  var swiper2 = new Swiper('.index .sec2Swiper', {
-      slidesPerView: "auto",
-      freeMode: false,
-      slideToClickedSlide: true,
-      grabCursor: true,
-      observer: true,
-      observeParents: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        560.33: {
-          slidesPerView: 2, 
+  function initSwiper() {
+    var length2 = $(".mobileBoxcont .swiper-slide").length;
+    var swiper2 = new Swiper('.index .sec2Swiper', {
+        slidesPerView: "auto",
+        freeMode: false,
+        slideToClickedSlide: true,
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
-      },
-    
-      on: {
-        init: function () {
-          console.log("시작시작")
-          $.fn.fullpage.setAllowScrolling(true)  
+        breakpoints: {
+          560.33: {
+            slidesPerView: 2, 
+          },
         },
-        slideChange: function(){       
-          $.fn.fullpage.setAllowScrolling(true) 
-        }, 
-      }
-  });
+      
+        on: {
+          init: function () {
+            console.log("시작시작")
+            $.fn.fullpage.setAllowScrolling(true)  
+          },
+          slideChange: function(){       
+            $.fn.fullpage.setAllowScrolling(true) 
+          }, 
+        }
+    });
+  }
+  
 
   if($(".index .sec3").hasClass("active")) {
     $.fn.fullpage.setAllowScrolling(true); 
