@@ -301,7 +301,7 @@
 .line li{width:1px; background-color:#eee; }
 
 .sec2 .Icon {width: calc(100% - 120px);}
-.Icon {display: flex; height:100%; position:absolute;/*width: calc(100% - 120px);*/ width:100%;}
+.Icon {display: flex; position:absolute;/*width: calc(100% - 120px);*/ width:100%;}
 .Icon li{margin-left:-9px; top:-40px; width:1px; position:absolute;}
 .Icon li:nth-child(2){left:33.3%;}
 .Icon li:nth-child(3){left:66.6%;}

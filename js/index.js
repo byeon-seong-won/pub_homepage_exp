@@ -420,39 +420,25 @@ $(document).ready(function() {
   // services swiper slide
   // var length2 = $(".mobileBoxcont .swiper-slide").length;
   
-  function initSwiper() { 
-    var screenWidth = $(window).width();
+  var length2 = $(".mobileBoxcont .swiper-slide").length;
 
-    if(screenWidth < 1023.33) {
-      var swiper2 = new Swiper('.index .sec2Swiper', {
-        slidesPerView: 'auto',
-        freeMode: false,
-        slideToClickedSlide: true,
-        grabCursor: true,
-        allowTouchMove : true,
-        observer: true,
-        observeParents: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+  var swiper2 = new Swiper('.index .sec2Swiper', {
+      slidesPerView: 'auto',
+      freeMode: false,
+      slideToClickedSlide: true,
+      grabCursor: true,
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        529.33: {
+          slidesPerView: 2, 
         },
-        breakpoints: {
-          529.33: {
-            slidesPerView: 2, 
-          },
-        },
-      });
-    } else {
-      swiper2.destroy();
-      $('.swiper-wrapper').removeAttr('style');
-      $('.swiper-slide').removeAttr('style');
-    }
-  }
-
-  initSwiper();
-  $(window).on('resize', function(){
-      initSwiper();
-  }); 
+      },
+  });
 
 
 
