@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({         
     anchors: ['sec1', 'sec2', 'sec3', 'sec4'],
     menu: '#menu',
-    scrollingSpeed: 500,
+    scrollingSpeed: 1000,
     navigation: true,
     // responsiveWidth: 1025,
     navigationPosition: 'right',
@@ -77,6 +77,13 @@ $(document).ready(function() {
           // swiper1.slideTo(0);
 
       } 
+      else if (nextIndex == 3) {
+        console.log("fullpage services 진입")
+        if($(".index .sec3").hasClass("active")) {
+          initSwiper();
+          $.fn.fullpage.setAllowScrolling(true); 
+        }
+      }
 
 
       // about us -> services
@@ -216,10 +223,14 @@ $(document).ready(function() {
         $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
         $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
         $('.index section .sec3 .ani_txt span').addClass('animation')
-        if($(".index .sec3").hasClass("active")) {
-          initSwiper();
-        }
+        // if($(".index .sec3").hasClass("active")) {
+        //   initSwiper();
+        // } 
+        
+       
 
+
+        
 
         // pagination  
         $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
@@ -396,7 +407,7 @@ $(document).ready(function() {
 
 
   function initSwiper() {
-    var length2 = $(".mobileBoxcont .swiper-slide").length;
+    // var length2 = $(".mobileBoxcont .swiper-slide").length;
     var swiper2 = new Swiper('.index .sec2Swiper', {
         slidesPerView: "auto",
         freeMode: false,
@@ -415,21 +426,17 @@ $(document).ready(function() {
         },
       
         on: {
-          init: function () {
-            console.log("시작시작")
-            $.fn.fullpage.setAllowScrolling(true)  
-          },
-          slideChange: function(){    
-            console.log("swiper 실행중")   
+          // init: function () {
+          //   console.log("시작시작")
+          //   $.fn.fullpage.setAllowScrolling(true)  
+          // },
+          slideChange: function(){       
             $.fn.fullpage.setAllowScrolling(true) 
           }, 
         }
     });
   }
   
-
- 
-       
 
 
 
