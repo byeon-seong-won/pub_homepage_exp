@@ -218,11 +218,9 @@ $(document).ready(function() {
         $('.index section .sec3 .ani_txt span').addClass('animation')
         if($(".index .sec3").hasClass("active")) {
           initSwiper();
+          $.fn.fullpage.setAllowScrolling(true)  
         }
-        if($(".index .sec3").hasClass("active")) {
-          $.fn.fullpage.setAllowScrolling(true); 
-        }
-        
+
 
         // pagination  
         $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
