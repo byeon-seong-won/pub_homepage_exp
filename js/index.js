@@ -171,7 +171,10 @@ $(document).ready(function() {
           $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
-          $('.index section .sec1 .ani_txt span').addClass('animation')
+          $('.index section .sec1 .ani_txt span').addClass('animation');
+          if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
+
+
         } else {
      
           $('.index section .sec1 .ani_txt span').removeClass('animation')
