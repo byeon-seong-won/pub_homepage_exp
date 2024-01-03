@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({         
     anchors: ['sec1', 'sec2', 'sec3', 'sec4'],
     menu: '#menu',
-    scrollingSpeed: 1000,
+    scrollingSpeed: 600,
     navigation: true,
     // responsiveWidth: 1025,
     navigationPosition: 'right',
@@ -264,7 +264,7 @@ $(document).ready(function() {
         $('.index .topBtn').css({"display" : "none"})
       }
 
-      if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
+      // if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
 
       // if(swiper1) swiper1.mousewheel.enable();    
       // if(swiper4) swiper4.mousewheel.enable();    
