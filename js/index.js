@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({         
     anchors: ['sec1', 'sec2', 'sec3', 'sec4'],
     menu: '#menu',
-    scrollingSpeed: 300,
+    scrollingSpeed: 1000,
     navigation: true,
     // responsiveWidth: 1025,
     navigationPosition: 'right',
@@ -218,39 +218,7 @@ $(document).ready(function() {
         $('.index section .sec3 .ani_txt span').addClass('animation')
 
 
-        var length2 = $(".mobileBoxcont .swiper-slide").length;
-        var swiper2 = new Swiper('.index .sec2Swiper', {
-            slidesPerView: "auto",
-            freeMode: false,
-            slideToClickedSlide: true,
-            grabCursor: true,
-            observer: true,
-            observeParents: true,
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-              560.33: {
-                slidesPerView: 2, 
-              },
-            },
-          
-            on: {
-              init: function () {
-                console.log("시작시작")
-                $.fn.fullpage.setAllowScrolling(true)  
-              },
-              slideChange: function(){       
-                $.fn.fullpage.setAllowScrolling(true) 
-              }, 
-            }
-        });
-
-        if($(".index .sec3").hasClass("active")) {
-          $.fn.fullpage.setAllowScrolling(true); 
-        }
-       
+        
 
         // pagination  
         $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
@@ -423,6 +391,43 @@ $(document).ready(function() {
   //       }, 
   //     }
   // });
+
+
+
+
+  var length2 = $(".mobileBoxcont .swiper-slide").length;
+  var swiper2 = new Swiper('.index .sec2Swiper', {
+      slidesPerView: "auto",
+      freeMode: false,
+      slideToClickedSlide: true,
+      grabCursor: true,
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        560.33: {
+          slidesPerView: 2, 
+        },
+      },
+    
+      on: {
+        init: function () {
+          console.log("시작시작")
+          $.fn.fullpage.setAllowScrolling(true)  
+        },
+        slideChange: function(){       
+          $.fn.fullpage.setAllowScrolling(true) 
+        }, 
+      }
+  });
+
+  if($(".index .sec3").hasClass("active")) {
+    $.fn.fullpage.setAllowScrolling(true); 
+  }
+       
 
 
 
