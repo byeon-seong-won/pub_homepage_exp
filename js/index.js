@@ -404,16 +404,16 @@ $(document).ready(function() {
         },
       },
     
-      on: {
-        // init: function () {
-        //   console.log("swiper 시작")
-        //   $.fn.fullpage.setAllowScrolling(true) 
-        // },
-        slideChange: function(){     
-          console.log("swiper 실행중") 
-          $.fn.fullpage.setAllowScrolling(true) 
-        }, 
-      }
+      // on: {
+      //   init: function () {
+      //     console.log("swiper 시작")
+      //     $.fn.fullpage.setAllowScrolling(true) 
+      //   },
+      //   slideChange: function(){     
+      //     console.log("swiper 실행중") 
+      //     $.fn.fullpage.setAllowScrolling(true) 
+      //   }, 
+      // }
   });
 
 
