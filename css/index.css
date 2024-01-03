@@ -19,13 +19,10 @@
 .index .mobilelogo {display: none;}
 .index .nomobileTitle {display: block;}
 .index .mobileTitle {display: none;}
-.index .section.sec1 {
+/* .index .section.sec1 {
     background : url(../img/mainBg.png) center center;
     z-index: -1;
     background-color: #000;
-    /* background-size : cover;
-    animation: displace 1s linear alternate;
-    animation-fill-mode: both; */
     background-size:cover;
     -webkit-animation: slidein 100s alternate;
     animation: slidein 100s alternate;
@@ -40,11 +37,6 @@
     -webkit-animation-direction: alternate;
     animation-direction: alternate;            
 }
-/* @keyframes displace {
-  from { background-size:1200px 1200px;} 
-  to { background-size:2000px 2000px;}
-}
- */
 
 @-webkit-keyframes slidein {
   from {background-position: center -500px; background-size:2500px;}
@@ -53,16 +45,17 @@
 @keyframes slidein {
   from {background-position: center -500px;background-size:2500px;}
   to {background-position: 2000px top;background-size:2500px;}
-}
+} */
 
 
 .index .section.sec1 .fp-tableCell {position: relative;}
 .index .section.sec1 .fp-tableCell>img {position: absolute;left: 0;bottom: 0;width: 100%;}
+.index .section.sec1 .section_inner {z-index: 10000;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);overflow: hidden;}
 .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 50px;}
 .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
     font-size: 5.8rem;
     text-shadow: -0.1rem 0px #fff, 0px 0.1rem #fff, 0.1rem 0px #fff, 0px -0.1rem #fff;
-    font-weight: 500;letter-spacing: normal;
+    font-weight: bold;letter-spacing: normal;
     line-height: 49px;
 }
 
@@ -70,8 +63,130 @@
 .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img{transform: translateY(-6px);}
 
 
-.index .section.sec1 .section_inner .swiper-slide {border: 3px solid red;}
-.index .section.sec1 .section_inner .swiper-slide .swiperwrapper {border: 3px solid blue;}
+/* .index .section.sec1 .section_inner .swiper-slide {border: 3px solid red;}
+.index .section.sec1 .section_inner .swiper-slide .swiperwrapper {border: 3px solid blue;} */
+
+
+
+
+
+
+/* 인트로 애니메이션 */
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(2000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(2000px, 0px, 0px);
+  }
+}
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(2000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(2000px, 100px, 0px);
+  }
+}
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: transparent url("../img/mainBg.png") repeat-x;
+  position: absolute;
+  top: -20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("../img/mainBg.png") repeat-x;
+  background-size: 1000px 2000px;
+  position: absolute;
+  right: 0;
+  top: -20%;
+  bottom: 0;
+  z-index: 2;
+  -moz-animation: move-background 40s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("../img/mainBg.png") repeat-x;
+  background-size: 1000px 1000px;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.backBg {
+  background: #000 url("../img/mainMount.png") no-repeat;
+  width: 100vw;height: 100vh;
+}
+.mainMt {
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* /////////// section 2 : about us /////////// */
@@ -275,8 +390,8 @@
 /* /////////// section 3 : our services /////////// */
 
 /* 반응형 display */
-.index .section.sec3 .fp-tableCell .service_cont .mobile_service {display: none;}
-.index .section.sec3 .fp-tableCell .service_cont .nomobile_service {display: block;}
+.index .section.sec3 .fp-tableCell .service_cont .mobile_service {display: none;border: 4px solid blue;}
+.index .section.sec3 .fp-tableCell .service_cont .nomobile_service {display: block;border: 4px solid red;}
 /* /// 반응형 display /// */
 
 .index .section.sec3 .fp-tableCell {width: 100%;height: 100%;box-sizing: border-box;position: relative;}
@@ -398,7 +513,7 @@
 
   /* section 1 메인 */
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 39px;}
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 53px;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 4.8rem;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size: 40px;line-height: 70px;}
   .index .sec1Swiper img.logo {width: 817px;max-width: 70%;}
 
@@ -445,7 +560,7 @@
   .index .sec1Swiper img.logo {width: 817px;}
   .index .mobilelogo {display: block; max-width:600px; width:80%;}
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 39px;}
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 45px;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 3.8rem;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size:30px;line-height:62px;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img {
     width: 72px; width:60px; transform:translateY(0);}
@@ -548,7 +663,7 @@
   .Icon li img{width:13px;}
 
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 30px;text-align: center;}
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 30px;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2.8rem;}
   
   .index .section.sec1 .fp-tableCell>img {height: 100%;object-fit: cover;}
 
@@ -678,7 +793,9 @@
     }
    
 
-    
+    .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2rem;}
+
+
     .index .section.sec2 .fp-tableCell>div.leftText{bottom:60px;}
     .index .section.sec2 .fp-tableCell>div.leftText .tableCell{vertical-align: bottom;}
 
