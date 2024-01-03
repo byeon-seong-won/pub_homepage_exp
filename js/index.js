@@ -437,7 +437,11 @@ $(document).ready(function() {
           slidesPerView: 2, 
         },
       },
+    
       on: {
+        init: function () {
+          $.fn.fullpage.setAllowScrolling(true) 
+        },
         slideChange: function(){       
           $.fn.fullpage.setAllowScrolling(true) 
         }, 
