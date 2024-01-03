@@ -282,7 +282,7 @@ $(document).ready(function() {
       if($(".sub .sec2").hasClass("active")) {
         swiper3.mousewheel.enable();
       }
-      // if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
+      if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
     },
 
   });           
@@ -437,7 +437,6 @@ $(document).ready(function() {
           slidesPerView: 2, 
         },
       },
-    
       on: {
         slideChange: function(){       
           $.fn.fullpage.setAllowScrolling(true) 
