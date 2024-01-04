@@ -9,6 +9,9 @@ winHeight = window.innerHeight;
 init();
 animate();
 
+
+
+
 function init(){
   scene = new THREE.Scene();
   scene.fog = new THREE.FogExp2('#222', 0.001);
@@ -74,4 +77,17 @@ function animate(){
 function render(){
   camera.lookAt(scene.position);
   renderer.render(scene, camera);
-}
+};
+
+
+
+
+
+onResize() 
+
+
+
+
+
+
+

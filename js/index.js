@@ -311,6 +311,9 @@ $(document).ready(function() {
 
 
     // index 메인 
+    let mm = gsap.matchMedia();
+
+
     var length1 = $(".index .sec1 .swiper-slide").length;
     var swiper1 = new Swiper('.index .sec1Swiper', {
         slidesPerView: 1,
@@ -324,12 +327,15 @@ $(document).ready(function() {
         breakpoints: {
           1439.33: {
             slideToClickedSlide : false,  //브라우저가 1439.33보다 클 때
-            allowTouchMove : false,
+            allowTouchMove : false
           },
         },
         on: {
           slideChangeTransitionStart: function () {
-            $('.swiperwrapper').hide(0);
+            mm.add("(min-width: 1400px)", () => {
+              $('.swiperwrapper').hide(0);
+            });
+            
           },
           slideChange: function(){       
               var idx = this.activeIndex;
@@ -351,17 +357,19 @@ $(document).ready(function() {
             var idx = this.activeIndex;
 
             if(idx == 1) {
-              $('.swiperwrapper').show(0);
-              gsap.from(".swiperwrapper", {
-                duration: 1,
-                opacity: 0,
-                yPercent: 100,
-                ease: 'back.out',
-                scrollTrigger: {
-                  trigger: ".swiperwrapper",
-                  start: "top 80%",
-                  markers: false,
-                }
+              mm.add("(min-width: 1400px)", () => {
+                $('.swiperwrapper').show(0);
+                gsap.from(".swiperwrapper", {
+                  duration: 1,
+                  opacity: 0,
+                  yPercent: 100,
+                  ease: 'back.out',
+                  scrollTrigger: {
+                    trigger: ".swiperwrapper",
+                    start: "top 80%",
+                    markers: false,
+                  }
+                });
               });
               // indx 페이지
               setTimeout(() => $('.index section .sec1 .swiperwrapper.swiper_txt span').addClass('animation'), 400);
