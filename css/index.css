@@ -670,7 +670,7 @@
   .Icon li img{width:13px;}
 
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 30px;text-align: center;}
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2.8rem;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2.8rem;text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;}
   
   .index .section.sec1 .fp-tableCell>img {height: 100%;object-fit: cover;}
 
@@ -721,20 +721,11 @@
   .index .section.sec3 .fp-tableCell .service_cont .boxCont .serviceBox>img.serviceImg {width: 376px;}
 
 
-
-  
-
-  /* services 세로선 */
   .index .sec1Swiper img.logo {
     width: 817px;
   }
   .index .logo {display: none;}
-  .index .mobilelogo {display: block ;}
-
-/*
-  .index .section.sec4 .fp-tableCell .contact_cont .boxCont {flex-direction: column;gap: 10px;margin-top: 4vw;}
-  .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>p {margin-bottom: 5px;}
-*/
+  .index .mobilelogo {display: block;}
 
   .index .mobileIcon {display: block;}
 
@@ -748,6 +739,13 @@
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(1) {font-size: 20px; line-height:30px;margin-top: 2vw;}
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(2) {font-size: 15px; line-height: 25px;}
   
+
+
+
+
+
+
+
 
 }
 
@@ -797,7 +795,10 @@
     }
    
 
-    .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2rem;}
+    .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
+      font-size: 2rem;
+      text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
+    }
 
 
     .index .section.sec2 .fp-tableCell>div.leftText {bottom:60px;}
