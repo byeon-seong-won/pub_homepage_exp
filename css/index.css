@@ -48,7 +48,7 @@
 } */
 
 
-.index .section.sec1 .fp-tableCell {position: relative;}
+.index .section.sec1 .fp-tableCell {position: relative;height: auto !important;}
 .index .section.sec1 .fp-tableCell>img {position: absolute;left: 0;bottom: 0;width: 100%;}
 .index .section.sec1 .section_inner {z-index: 10000;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);overflow: hidden;}
 .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 50px;}

@@ -682,20 +682,33 @@ $(document).ready(function() {
 
   
 
+    $(window).scroll(function() {
+      window.addEventListener("resize", function() {
+        $(window).scrollTop(0);
+        console.log("scrolllllltop")
+        swiper1.slidTo(0);
+      })
+    })
+  
+
+
 
 
     
 
-    });
+  });
 
   
 
 
   // 브라우저 resize 처리
-  // $(window).scroll(function() {
-  //   window.addEventListener("resize", function() {
-  //     $(window).scrollTop(0);
-  //   })
+  // window.addEventListener("resize", function() {
+  //   console.log("resizeeeeeeeeeeeeeeeee")
+  //   swiper1.slidTo(0);
+  //   console.log("slied tooooooooooooo 1")
   // })
 
+
+
+  
 
