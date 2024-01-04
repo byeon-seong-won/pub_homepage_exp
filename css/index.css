@@ -55,7 +55,7 @@
 .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
   font-size: 6rem;
   /* text-shadow: -0.11rem 0px #fff, 0px 0.11rem #fff, 0.11rem 0px #fff, 0px -0.11rem #fff; */
-  text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;
+  text-shadow:-1.5px 0px #fff,1.5px 0px #fff,0px -1.5px #fff,0px 1.5px #fff;
   font-weight: bold;letter-spacing: normal;
   line-height: 49px;
 }
@@ -568,7 +568,7 @@
   .index .sec1Swiper img.logo {width: 817px;}
   .index .mobilelogo {display: block; max-width:600px; width:80%;}
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 39px;}
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 3.8rem;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 3.8rem;text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size:30px;line-height:62px;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img {
     width: 72px; width:60px; transform:translateY(0);}
@@ -671,7 +671,7 @@
   .Icon li img{width:13px;}
 
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 30px;text-align: center;}
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2.8rem;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2.8rem;text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;}
   
   .index .section.sec1 .fp-tableCell>img {height: 100%;object-fit: cover;}
 
@@ -798,7 +798,7 @@
 
     .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
       font-size: 2rem;
-
+      text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;
     }
 
 
