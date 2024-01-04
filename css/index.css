@@ -670,7 +670,7 @@
   .Icon li:nth-child(3){margin-left:-4px;}
   .Icon li img{width:13px;}
 
-  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 30px;text-align: center;}
+  .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 10px;text-align: center;}
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-size: 2.8rem;text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;}
   
   .index .section.sec1 .fp-tableCell>img {height: 100%;object-fit: cover;}
