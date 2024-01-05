@@ -276,6 +276,6 @@ section .swiper_txt span {position: relative;}
   }
 
   to {
-    transform: translate(000px,1000px) scale(1);
+    transform: translate(1000px,1000px) scale(1);
   }
 }

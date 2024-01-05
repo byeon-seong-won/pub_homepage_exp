@@ -384,9 +384,10 @@ $(document).ready(function() {
                     markers: false,
                   }
                 });
+                setTimeout(() => $('.index section .sec1 .swiperwrapper.swiper_txt span').addClass('animation'), 400);
               });
               // indx 페이지
-              setTimeout(() => $('.index section .sec1 .swiperwrapper.swiper_txt span').addClass('animation'), 400);
+              $('.index section .sec1 .swiperwrapper.swiper_txt span').addClass('animation')
               $('.index section .sec1 .ani_txt span').removeClass('animation') 
 
             } else if(idx == 0) {
