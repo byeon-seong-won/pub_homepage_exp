@@ -9,6 +9,8 @@ $(document).ready(function() {
     })
 
 
+
+
     // fullpage
     $('#fullpage').fullpage({         
       anchors: ['sec1', 'sec2', 'sec3', 'sec4'],
@@ -296,9 +298,21 @@ $(document).ready(function() {
         // if(!$(".sub .sec2").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
        
         
+
+
+
+
+
+
         if($(".sub .sec2").hasClass("active")) {
           swiper3.mousewheel.enable();
         }
+
+
+
+
+
+
         // if(!$(".index .sec3").hasClass("active")) $.fn.fullpage.setAllowScrolling(true); 
       },
 
@@ -580,12 +594,15 @@ $(document).ready(function() {
                 $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
                 $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
                 $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').addClass('ani')
                 $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
                 $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               } if(idx == 2) {
                 console.log("서브3")
                 $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').addClass('ani')
                 $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img').addClass('ani')
                 $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').addClass('ani')
                 $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               } else if (idx == 3) {
@@ -627,6 +644,7 @@ $(document).ready(function() {
               $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
             } else if(idx == 1) {
               console.log("2번째 슬라이드")
               $('.sub section .sec2 .ani_txt.ani_txt02 span').addClass('animation')
@@ -643,8 +661,10 @@ $(document).ready(function() {
               $('.sub section .sec2 .ani_txt.ani_txt02 span').removeClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt04 span').removeClass('animation')
               $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
               $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
             } else if (idx == 3) {
               $('.sub section .sec2 .ani_txt.ani_txt04 span').addClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')
@@ -682,18 +702,12 @@ $(document).ready(function() {
 
   
 
-    $(window).scroll(function() {
-      window.addEventListener("resize", function() {
-        $(window).scrollTop(0);
-        console.log("scrolllllltop")
-        swiper1.slidTo(0);
-      })
-    })
+   
+      // window.addEventListener("resize", function() {
+      //   console.log("scrolllllltop")
+      //   $("html,body").animate({scrollTop:"0"});   
+      // })
   
-
-
-
-
     
 
   });

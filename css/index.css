@@ -179,7 +179,7 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  object-fit: cover;
+  /* object-fit: cover; */
   /* background: url("../img/bg_mount.png") no-repeat; */
 
 }
@@ -444,7 +444,7 @@
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont {margin-top:2vw; display: flex;}
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li {position: relative;flex: 1; width:33.3%}
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li>img {position: absolute;width: 20px;height: 20px; top:-6vw;left: 0;transform: translate(-50%,-50%);}
-.index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>p {font-size: 20px;font-weight: bold;color: #fff;margin-bottom: 10px;}
+.index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>p {font-size: 19px;font-weight: bold;color: #fff;margin-bottom: 10px;}
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>span {font-size: 20px;font-weight: 400;color: #fff;}
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li:nth-child(2) .contactBox>p:not(:nth-of-type(1)) {margin-top:20px;}
 
@@ -534,10 +534,15 @@
 
 
 
+@media (min-width:1023.33px) and (max-width: 1120px) {
+  .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>span {font-size: 19px;}
+  .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>span.spacing {letter-spacing: -0.1em;}
+}
+
 
 
 /* 큰 mobile */
-@media (max-width:1024.33px) {
+@media (max-width:1025px) {
   /* 공통 */
   .index .section.sec2 .fp-tableCell,
   .index .section.sec3 .fp-tableCell .tableCell,
@@ -664,6 +669,10 @@
 
 /* mobile */
 @media (max-width:767.33px) {
+
+
+  .mainMt {object-fit: cover;}
+
   .sec2 .Icon {width: calc(100% - 80px);}
   .Icon li{margin-left:-6px;}
   .Icon li:nth-child(2){margin-left:-5px;}
@@ -842,11 +851,17 @@
   width:100%!important;
   }
   
+  
+
   .index section .sec3 .ani_txt, .index section .sec2 .ani_txt, .index section .sec4 .ani_txt{
     margin-bottom:10px;
   }
 
+  .index section .sec2.fp-completely .ani_txt.spacing span {letter-spacing: -0.1em;}
+
   .index .section.sec4 .fp-tableCell .contact_cont .boxCont {flex-direction: column;gap: 10px;margin-top: 4vw;}
   .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>p {margin-bottom: 5px;}
+
+
   
 }

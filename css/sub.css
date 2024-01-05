@@ -151,7 +151,14 @@
     }
 }
 
-.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img.ani {
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img.ani,
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img.ani,
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img.ani,
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img.ani,
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img.ani,
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img.ani,
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img.ani,
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img.ani  {
     width: 100%;
     -webkit-animation: transY .5s 1.1s both;
     animation: transY .5s 1.1s both;
@@ -180,20 +187,16 @@
 .sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img.ani,
 .sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img.ani,
 .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img.ani,
-.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img.ani,
-.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img.ani,
-.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img.ani,
-.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img.ani,
-.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img.ani   {
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img.ani {
     width: 100%;
     -webkit-animation: transAni .5s 1.1s both;
     animation: transAni .5s 1.1s both;
 }
 
+
 .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-child(1) {
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
-
 }
 .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-child(2){
     position: absolute;
@@ -230,6 +233,127 @@
     -webkit-animation-delay: 1.2s;
     animation-delay: 1.2s;
 }
+
+
+
+/* 퀴즈클릭 03 */
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg {
+    display: grid;
+    grid-template-areas:
+    ". a b b"
+    ". . c c"
+    "d d d g"
+    ". e e g"
+    ". f f g "
+}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(1) {grid-area: a;margin-left: 25px;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(2) {grid-area: b;margin-left: 25px;-webkit-animation-delay: 1s;animation-delay: 1s;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(3) {grid-area: c;margin-left: -100px;-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(4) {grid-area: d;-webkit-animation-delay: 1.5s;animation-delay: 1.5s;} 
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(5) {grid-area: e;margin-left: 50px;-webkit-animation-delay: 1.8s;animation-delay: 1.8s;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(6) {grid-area: f;margin-left: 10px;-webkit-animation-delay: 2s;animation-delay: 2s;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(7) {grid-area: g;z-index: 50;transform: translateY(-100px);-webkit-animation-delay: 2.2s;animation-delay:2.2s;}
+
+
+
+/* 퀴즈클릭 04 */
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg {
+    display: grid;
+    grid-template-areas:
+    ". . a a"
+    "b b . ."
+    ". . c c"
+    "d d . .";
+}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img:nth-of-type(1) {grid-area: a;margin-left: -50px;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img:nth-of-type(2) {grid-area: b;margin-right: 50px;-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img:nth-of-type(3) {grid-area: c;margin-left: -50px;-webkit-animation-delay: 1.5s;animation-delay: 1.5s;}
+.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg>img:nth-of-type(4) {grid-area: d;margin-right: 50px;-webkit-animation-delay: 1.7s;animation-delay: 1.7s;}
+
+
+
+
+/* 뉴스클릭 01 */
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img {
+    display: grid;
+    grid-template-areas:
+    ". a"
+    "b a"
+    "b c"
+    ". c";
+}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-of-type(1) {grid-area: a;margin-left: -50px;}
+
+
+
+
+
+
+/* 뉴스클릭 02 */
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img:nth-child(1) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+ 
+}
+
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div {
+    display: flex;
+    position: absolute;
+    bottom:0;
+    left: -2%;
+ 
+}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img:nth-child(1){
+    z-index: 1000;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img:nth-child(2){
+    z-index: 1000;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img:nth-child(3){
+    z-index: 1000;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+
+
+
+
+
+/* 뉴스클릭 03 */
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-child(1) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div {
+    display: grid;
+    grid-template-areas:
+    ". a"
+    "b c"
+    "b d"
+    ". d"
+    "e d";
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(1) {grid-area: a;margin-left: -100px;}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(2) {grid-area: b;-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(3) {grid-area: c;-webkit-animation-delay: 1.5s;animation-delay: 1.5s;}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(4) {grid-area: d;-webkit-animation-delay: 1.7s;animation-delay: 1.7s;}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(5) {grid-area: e;margin-top: -150px;margin-left: 40px;-webkit-animation-delay: 1.9s;animation-delay: 1.9s;}
+
+
+
+
+
+
+
+
 /* /////////// 퀴즈클릭 02 /////////// */
 
 
@@ -434,7 +558,7 @@
     }
 
     .sub .section.sec2 .section_inner .btn_wrap{
-        bottom:60px;
+        bottom:80px;
         text-align:center;
         width:100%;
         left:50%;
