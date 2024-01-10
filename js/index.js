@@ -15,7 +15,7 @@ $(document).ready(function() {
     $('#fullpage').fullpage({         
       anchors: ['sec1', 'sec2', 'sec3', 'sec4'],
       menu: '#menu',
-      scrollingSpeed: 1000,
+      scrollingSpeed: 700,
       navigation: true,
       // responsiveWidth: 1025,
       navigationPosition: 'right',
@@ -568,7 +568,7 @@ $(document).ready(function() {
         slidesPerView: 1,
         spaceBetween: 0,
         freeMode: false,
-        speed: 1000,
+        speed: 700,
         slideToClickedSlide : true,
         mousewheel: true,
         direction: "vertical",
