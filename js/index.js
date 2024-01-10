@@ -49,9 +49,7 @@ $(document).ready(function() {
             $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
             $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
             $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
-        
-
-        
+          
           } 
         // about us -> 메인
         else if (index == 2 && direction == 'up'){
@@ -181,7 +179,9 @@ $(document).ready(function() {
           // console.log("mainmainmain")
           // if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
           
-
+          if($(".index .sec1").hasClass("active")) {
+            $.fn.fullpage.setAllowScrolling(true); 
+          } 
 
 
         } else {
@@ -198,6 +198,8 @@ $(document).ready(function() {
           $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index section .sec2 .ani_txt span').addClass('animation')
+
+
           $('.sub .topBtn').attr("src", "../img/sub_top.png")
           $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
 
@@ -213,7 +215,9 @@ $(document).ready(function() {
           $('.index #fp-nav ul li').css({"border" : "none"});
           $('.index #fp-nav ul li:nth-child(2)').css({"border" : "solid 0.13rem #000", "border-radius" : "50%"});
           $('.sub section .sec2 .ani_txt.ani_txt_fix span').addClass('animation');
-          
+          if($(".index .sec2").hasClass("active")) {
+            $.fn.fullpage.setAllowScrolling(true); 
+          } 
 
 
 
@@ -270,6 +274,11 @@ $(document).ready(function() {
           $('.index #fp-nav ul li').css({"border" : "none"});
           $('.index #fp-nav ul li:nth-child(4)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
           $('.index .topBtn').css({"display" : "block"})
+
+          if($(".index .sec4").hasClass("active")) {
+            $.fn.fullpage.setAllowScrolling(true); 
+          } 
+
         } else {
           $('.index section .sec4 .ani_txt span').removeClass('animation')
           $('.index header nav ul li:nth-child(4)').css({"border" : "none"})
@@ -595,7 +604,7 @@ $(document).ready(function() {
                 $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
                 $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
                 $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').addClass('ani')
-                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').addClass('ani')
+                $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div').addClass('ani')
                 $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
                 $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
                 $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
@@ -644,8 +653,8 @@ $(document).ready(function() {
               $('.sub section .sec2 .ani_txt.ani_txt04 span').removeClass('animation')
               $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div').removeClass('ani')
               $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
-              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
             } else if(idx == 1) {
               console.log("2번째 슬라이드")
               $('.sub section .sec2 .ani_txt.ani_txt02 span').addClass('animation')
@@ -665,7 +674,7 @@ $(document).ready(function() {
               $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
               $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
               $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
-              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>img').removeClass('ani')
+              $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div').removeClass('ani')
             } else if (idx == 3) {
               $('.sub section .sec2 .ani_txt.ani_txt04 span').addClass('animation')
               $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')

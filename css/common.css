@@ -177,7 +177,7 @@ header nav #menu li a {
 
 
 /* mobile */
-@media (max-width:560px) {
+@media (max-width:770px) {
     header {
         top: 28px;
         left: 20px;

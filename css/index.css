@@ -217,25 +217,82 @@
 
 
 /* /////////// 공 애니메이션 /////////// */
-.index .section.sec2{position:relative;}
-.index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);transition: 0.5s;}
-.index .section.sec2 .rightImg>img.ball {
-  animation: rotatebox ease-in-out infinite alternate;
+.index .section.sec2 {position:relative;}
+.index .section.sec2 .rightImg {border: 3px solid red;}
+.index .section.sec2 .rightImg>div {border: 1px solid #000;position:absolute; left:50%; top:0; height: 100%;}
+.index .section.sec2 .rightImg>div>img {position:absolute; left:50%; top:50%;transform: translate(-10%, -43%);}
+.index .section.sec2 .rightImg>div>img.ball {
+  /* animation: rotatebox ease-in-out infinite alternate;
   animation-duration: 5s;
   animation-fill-mode: both;
   transform-origin:center center; 
   transform-style: preserve-3d;
   animation-play-state : running;
-  transition: 0.2s;
-  margin-top:34px;
-  margin-left:143px;
+  transition: 0.2s; */
+  /* margin-top:34px; */
+  /* top: 0; */
+  /* margin-left:143px; */
+  border: 1px solid #000;
 }
 
-.index .section.sec2 .rightImg>img.circle {
- z-index: 1000; 
+.index .section.sec2 .rightImg>div>img.ball.ani {
+  /* width: 174px;
+  height: 175px; */
+  margin-left:200px;
+  border: 2px solid red;
+  animation: blueBall 3s 0.1s cubic-bezier(0,.3,0,1);
 }
 
-@keyframes rotatebox{
+
+
+
+
+.index .section.sec2 .rightImg>div>img.circle {
+  z-index: 1000; 
+  border: 1px solid green;
+
+}
+
+
+
+
+
+@keyframes blueBall {
+  0% {
+    top: 0px;
+    width: 174px;
+    height: 175px;
+
+  }
+  95% {
+    width: 264px;
+    height: 264px;
+  }
+  to {
+    width: 264px;
+    height: 264px;
+    /* transform: translateY(100px); */
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes move {
+  from { top: 0; }
+  to { top: 50%; }
+}
+
+@keyframes rotatebox {
   0% {
     transform: translate(0, -43%) rotate(0);
   }
@@ -244,7 +301,7 @@
   }
 }
 
-@-webkit-keyframes rotatebox{
+@-webkit-keyframes rotatebox {
   0% {
     transform: translate(0, -43%) rotate(0);
   }
@@ -326,51 +383,7 @@
 
 
 
-.index .section.sec2 .rightImg>div.front01 {top: 40%;left: 50%;transform: translate(-50%,-50%);z-index:0;}
-.index .section.sec2 .rightImg>div.back01 {top: 40%;margin-top:58px; left: 50%;transform: translate(-50%,-50%);z-index:5000;}
-.index .section.sec2 .rightImg>div.front02 {top: 44%;left: 50%;transform: translate(-50%,-50%);z-index:0;}
-.index .section.sec2 .rightImg>div.back02 {top: 44%; margin-top:58px; left: 50%;transform: translate(-50%,-50%);z-index:5000;}
-.index .section.sec2 .rightImg>div.front03 {top: 55%;left: 50%;transform: translate(-50%,-50%);z-index:0;}
-.index .section.sec2 .rightImg>div.back03 {top: 55%; margin-top:58px;  left: 50%;transform: translate(-50%,-50%);z-index:5000;}
-.index .section.sec2 .rightImg>div.front04 {top: 68%;left: 50%;transform: translate(-50%,-50%);z-index:0;}
-.index .section.sec2 .rightImg>div.back04 {top: 68%;margin-top:58px; left: 50%;transform: translate(-50%,-50%);z-index:5000;}
 
-.index .section.sec2 .rightImg>div>div {display: flex;flex-direction: column;width: 738px;}
-.index .section.sec2 .rightImg>div>img {transform: rotateX(180deg);}
-.index .section.sec2 .rightImg>div.front>img {
-  transform: scaleX(1);transition: 0.5s;
-  /* animation: circleMove linear;
-  animation-fill-mode:forwards;
-  animation-duration: 1s; 
-  animation-play-state: running; */
-  /* -webkit-animation: circleMove 2s infinite;  
-
-  -webkit-animation-play-state: running;  
-
-  animation: circleMove 2s infinite;
-
-  animation-play-state: running; */
-}
-/* .section.sec2 .rightImg>div.back>img {animation: circleMove 1s steps(2,end) infinite alternate;animation-fill-mode:none;} */
-
-.index .section.sec2 .rightImg>div.front.ani>img {transform: scaleX(-1);transition: 5s;border: 3px solid red;}
-
-
-
-.index .section.sec2 .rightImg>div>div.circle_line01 {margin-top: 40px;position: relative;}
-.index .section.sec2 .rightImg>div>div.circle_line02 {margin-top: -70px;position: relative;}
-.index .section.sec2 .rightImg>div>div.circle_line03 {margin-top: 3;position: relative;}
-.index .section.sec2 .rightImg>div>div.circle_line04 {margin-top: 200px;position: relative;}
-.index .section.sec2 .rightImg>div>div.circle_line01>img:nth-child(2),
-.index .section.sec2 .rightImg>div>div.circle_line02>img:nth-child(2) {z-index: 1000;}
-.index .section.sec2 .rightImg>div>div.circle_line03>img:nth-child(1) {z-index:0;}
-.index .section.sec2 .rightImg>div>div.circle_line03>img:nth-child(2) {z-index: 1000;}
-
-@keyframes circleMove {
-  0% {
-    transform: rotate(180deg);
-  }
-}
 
 /* @keyframes backcircleMove {
   100% {
