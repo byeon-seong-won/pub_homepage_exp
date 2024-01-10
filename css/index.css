@@ -819,7 +819,8 @@
    
 
     .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
-      font-size: 2rem;
+      /* font-size: 2rem; */
+      font-size: 2.03rem;
       text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;
     }
 
