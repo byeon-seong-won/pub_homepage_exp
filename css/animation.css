@@ -46,7 +46,7 @@ section .swiper_txt span {position: relative;}
 
 
 /* 공통 */
-.index section .sec2.fp-completely .ani_txt {margin-top: 0;transition-delay: 0.8s;}
+.index section .sec2.fp-completely .ani_txt {margin-top: 0;transition-delay: 0.3s;}
 .index section .sec3 .ani_txt, 
 .index section .sec2 .ani_txt,
 .index section .sec4 .ani_txt {

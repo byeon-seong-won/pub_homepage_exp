@@ -199,7 +199,6 @@ $(document).ready(function() {
           $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index section .sec2 .ani_txt span').addClass('animation')
 
-
           $('.sub .topBtn').attr("src", "../img/sub_top.png")
           $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
 
