@@ -67,44 +67,6 @@
 /* .index .section.sec1 .section_inner .swiper-slide {border: 3px solid red;}
 .index .section.sec1 .section_inner .swiper-slide .swiperwrapper {border: 3px solid blue;} */
 
-
-
-
-
-
-/* 인트로 애니메이션 */
-/* @keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to {
-    -webkit-transform: translate3d(1000px, 100px, 100px);
-  }
-}
-@-webkit-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to {
-    -webkit-transform: translate3d(1000px, 100px, 100px);
-  }
-}
-@-moz-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to {
-    -webkit-transform: translate3d(1000px, 100px, 100px);
-  }
-}
-@-webkit-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-  to {
-    -webkit-transform: translate3d(1000px, 100px, 100px);
-  }
-} */
 .background-container {
   position: absolute;
   top: 0;
@@ -116,62 +78,6 @@
   background-color: #000;
 }
 
-/* .stars {
-  background: transparent url("../img/mainBg.png") repeat-y;
-  position: absolute;
-  top: -20%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: 0;
-  -moz-animation: move-background 40s linear infinite;
-  -ms-animation: move-background 40s linear infinite;
-  -o-animation: move-background 40s linear infinite;
-  -webkit-animation: move-background 40s linear infinite;
-  animation: move-background 40s linear infinite;
-
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("../img/mainBg.png") repeat-y;
-  background-size: 500px 500px;
-  position: absolute;
-  right: 0;
-  top: -20%;
-  bottom: 0;
-  z-index: 2;
-  -moz-animation: move-background 40s linear infinite;
-  -ms-animation: move-background 40s linear infinite;
-  -o-animation: move-background 40s linear infinite;
-  -webkit-animation: move-background 40s linear infinite;
-  animation: move-background 40s linear infinite;
-}
-
-.clouds {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("../img/mainBg.png") repeat-y;
-  background-size: 500px 500px;
-  background-size: cover;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  -moz-animation: move-background 40s linear infinite;
-  -ms-animation: move-background 40s linear infinite;
-  -o-animation: move-background 40s linear infinite;
-  -webkit-animation: move-background 40s linear infinite;
-  animation: move-background 40s linear infinite;
-} */
-
-/* .backBg {
-  background: #000 url("../img/bg_mount.png") no-repeat;
-  width: 100vw;height: 100%;
-} */
 .mainMt {
   width: 100%;
   height: 100%;
@@ -179,9 +85,6 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  /* object-fit: cover; */
-  /* background: url("../img/bg_mount.png") no-repeat; */
-
 }
 
 
@@ -216,190 +119,164 @@
 
 
 
+
+
+
 /* /////////// 공 애니메이션 /////////// */
+.index .section.sec2 .rightImg>img.ball.pcImg {display: block;}
+.index .section.sec2 .rightImg>img.ball.moImg {display: none;}
+
 .index .section.sec2 {position:relative;}
-.index .section.sec2 .rightImg {border: 3px solid red;}
-.index .section.sec2 .rightImg>div {border: 1px solid #000;position:absolute; left:50%; top:0; height: 100%;}
-.index .section.sec2 .rightImg>div>img {position:absolute; left:50%; top:50%;transform: translate(-10%, -43%);}
-.index .section.sec2 .rightImg>div>img.ball {
-  /* animation: rotatebox ease-in-out infinite alternate;
-  animation-duration: 5s;
+.index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);}
+.index .section.sec2 .rightImg>img.circle {z-index: 1000;}
+.index .section.sec2 .rightImg>img.ball.pcImg  {
+  transition: 0.2s;
+  margin-top:34px;
+  margin-left:210px;
+  width: 175px;
+  height: 175px;
+  top: 0;
+}
+.index .section.sec2 .rightImg>img.ball.pcImg.ani {
+  /* animation: bottombox ease-in-out alternate;   */
+  animation-duration: 1.5s;
   animation-fill-mode: both;
   transform-origin:center center; 
   transform-style: preserve-3d;
   animation-play-state : running;
-  transition: 0.2s; */
-  /* margin-top:34px; */
-  /* top: 0; */
-  /* margin-left:143px; */
-  border: 1px solid #000;
-}
-
-.index .section.sec2 .rightImg>div>img.ball.ani {
-  /* width: 174px;
-  height: 175px; */
-  margin-left:200px;
-  border: 2px solid red;
-  animation: blueBall 3s 0.1s cubic-bezier(0,.3,0,1);
+  -webkit-animation-name: bottombox, rotatebox;
+  -webkit-animation-duration: 3s, 6s;
 }
 
 
+/* .index .section.sec2 .rightImg>img.ball.pcImg.after {
+  animation: rotatebox ease-in-out infinite alternate-reverse;
+  animation-duration: 6s;
+  animation-fill-mode: both;
+  transform-origin:center center; 
+  transform-style: preserve-3d;
+  animation-play-state : running;
+  animation-delay: 0;
+} */
 
 
-
-.index .section.sec2 .rightImg>div>img.circle {
-  z-index: 1000; 
-  border: 1px solid green;
-
-}
-
-
-
-
-
-@keyframes blueBall {
-  0% {
-    top: 0px;
-    width: 174px;
-    height: 175px;
-
-  }
-  95% {
-    width: 264px;
-    height: 264px;
+@keyframes bottombox {
+  from {
+    top: 0;
   }
   to {
-    width: 264px;
-    height: 264px;
-    /* transform: translateY(100px); */
-
+    transform: scale(1.8);
+    top: 45%;
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-@keyframes move {
-  from { top: 0; }
-  to { top: 50%; }
+@-webkit-keyframes bottombox {
+  from {
+    top: 0;
+  }
+  to {
+    transform: scale(1.8);
+    top: 45%;
+  }
 }
-
 @keyframes rotatebox {
   0% {
-    transform: translate(0, -43%) rotate(0);
+    top: 45%;
+    transform: rotate(0) scale(1.8);
+  }
+  50% {
+    top: 45%;
+    transform: rotate(360deg) scale(1.8);
   }
   100% {
-    transform: translate(0, -43%) rotate(360deg);
+    top: 45%;
+    transform: rotate(0) scale(1.8);
   }
 }
 
 @-webkit-keyframes rotatebox {
   0% {
-    transform: translate(0, -43%) rotate(0);
+    top: 45%;
+    transform: rotate(0) scale(1.8);
+  }
+  50% {
+    top: 45%;
+    transform: rotate(360deg) scale(1.8);
   }
   100% {
-    transform: translate(0, -43%) rotate(360deg);
+    top: 45%;
+    transform: rotate(0) scale(1.8);
   }
 }
 
-/* .scene { 
-  width: 324px;
-  height: 324px;
-  perspective: 600px;
-}
 
-.cube { 
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform: translateZ(-100px);
-  animation: rotation 5s infinite;
 
-}
-.cube img {width: 324px;}
-.cube__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  font-size: 2.5em;
-  font-family: monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-  .cube__face--front {
-    background: rgba(98, 206, 203, 0.7);
-    transform: rotateY(0deg) translateZ(100px);
-  }
+
+
+
+
+/* pc 이하 공 애니메이션 */
+
+
+
+@media (max-width:1599.33px) {
+
   
-  .cube__face--back {
-    background: rgba(98, 155, 206, 0.7);
-    transform: rotateY(180deg) translateZ(100px);
+  .index .section.sec2 .rightImg>img.ball.pcImg {display: none;}
+  .index .section.sec2 .rightImg>img.ball.moImg {display: block;}
+
+
+  .index .section.sec2 {position:relative;}
+  .index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);transition: 0.5s;}
+  .index .section.sec2 .rightImg>img.circle {z-index: 1000;}
+  .index .section.sec2 .rightImg>img.ball.moImg {
+    animation: rotatebox ease-in-out infinite alternate;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    transform-origin:center center; 
+    transform-style: preserve-3d;
+    animation-play-state : running;
+    transition: 0.2s;
+    margin-top:34px;
+    margin-left:143px;
   }
-  
-  .cube__face--right {
-    background: rgba(98, 101, 206, 0.7);
-    transform: rotateY(90deg) translateZ(100px);
-  }
-  
-  .cube__face--left {
-    background: rgba(149, 98, 206, 0.7);
-    transform: rotateY(-90deg) translateZ(100px);
-  }
-  
-  .cube__face--top {
-    background:rgba(203, 98, 206, 0.7);
-    transform: rotateX(90deg) translateZ(100px);
-  }
-  
-  .cube__face--bottom {
-    background: rgba(206, 98, 155, 0.7);
-    transform: rotateX(-90deg) translateZ(100px);
-  }
-   */
-
-
-
-
-
-/* @keyframes rotation {
-  0% {
-    transform: translateZ(-100px) rotate3d(0,0,0);
-  }
-  100% {
-    transform: translateZ(-100px) rotate3d(1,0,1,360deg);
-  }
-} */
-
-
-
-
-
-/* @keyframes backcircleMove {
-  100% {
-    transform:rotate(180deg);
-  }
-  
-} */
-
-/*  */
-
-
-/* @keyframes ballAni {
-    100% {
-        transform: perspective(1000px) rotateX(45deg);
+  @keyframes rotatebox {
+    0% {
+      transform: translate(0, -43%) rotate(0);
     }
-} */
+    100% {
+      transform: translate(0, -43%) rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rotatebox {
+    0% {
+      transform: translate(0, -43%) rotate(0);
+    }
+    100% {
+      transform: translate(0, -43%) rotate(360deg);
+    }
+  }
+
+
+
+  .index .section.sec2 .rightImg>img {
+    transform: translate(-8%, -43%);
+  }
+  .index .section.sec2 .rightImg>img.ball.moImg {
+    width:16.8%;
+    margin-left:8.5%;
+    margin-top:1.9%;
+  }
+
+  .index .section.sec2 .rightImg>img.circle {
+    width:40%;
+  }
+}
+
+
+
+
+
 
 
 
@@ -409,6 +286,10 @@
 
 
 /* /////////// section 3 : our services /////////// */
+
+
+.index .section.sec3 .fp-tableCell .tableCell {background-color: #fff;}
+
 
 /* 반응형 display */
 .index .section.sec3 .fp-tableCell .service_cont .mobile_service {display: none;}
@@ -461,26 +342,6 @@
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li .contactBox>span {font-size: 20px;font-weight: 400;color: #fff;}
 .index .section.sec4 .fp-tableCell .contact_cont .boxCont>li:nth-child(2) .contactBox>p:not(:nth-of-type(1)) {margin-top:20px;}
 
-
-
-
-
-
-
-@media (max-width:1599px){
-  .index .section.sec2 .rightImg>img{
-    transform: translate(-8%, -43%);
-  }
-  .index .section.sec2 .rightImg>img.ball {
-    width:16.8%;
-    margin-left:8.5%;
-    margin-top:1.9%;
-  }
-
-  .index .section.sec2 .rightImg>img.circle {
-    width:40%;
-  }
-}
 
 
 
@@ -598,8 +459,8 @@
   /*.index .section.sec2 .fp-tableCell>div.leftText {flex: 0.7;}*/
   /* .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt br:not(.parag) {display: none;} */
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .titleText {width: calc(100% - 80px);}
-  .index .section.sec2 .rightImg>img.ball{margin-left:15.5%;opacity: 0.5;}
-  .index .section.sec2 .rightImg>img{transform: translate(9%, -43%);opacity: 0.5;}
+  .index .section.sec2 .rightImg>img.ball.moImb {margin-left:15.5%;opacity: 0.5;}
+  .index .section.sec2 .rightImg>img {transform: translate(9%, -43%);opacity: 0.5;}
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(1) {font-size: 30px;line-height: 45px;margin-top: 2vw;}
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(2) {font-size: 18px;line-height: 26px;}
   .index .section.sec2 .fp-tableCell>div.leftText {flex: 1;}
@@ -830,7 +691,7 @@
 
     
     .index .section.sec2 .rightImg>img {transform: translate(-50%, 120px); left:50%; top:0;}
-    .index .section.sec2 .rightImg>img.ball {width:114px; margin-top:213px; margin-left:-57px;}
+    .index .section.sec2 .rightImg>img.ball.moImg {width:114px; margin-top:213px; margin-left:-57px;}
     .index .section.sec2 .rightImg>img.circle {width:270px;}
 
   .sec2 .Icon {width: calc(100% - 40px);}

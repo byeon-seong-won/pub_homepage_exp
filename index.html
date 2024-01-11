@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&   family=Oleo+Script:wght@400;700&family=Tangerine:wght@700&  display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oleo+Script:wght@400;700&family=Tangerine:wght@700&  display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="shortcut icon" href="img/favicon.jpg">
 </head>
@@ -44,20 +44,13 @@
             <div class="section sec1 active">
 
                 <div class="background-container">
+                    <canvas id="webgl-canvas"></canvas>
                     <div id='stars'></div>
                     <div id='stars2'></div>
                     <div id='stars3'></div>
                     <div id='stars4'></div>
-                    <div class="backBg"></div>
                     <img src="img/bg_mount.png" class="mainMt">
-                    <!-- <div class="clouds"></div>
-                    <div class="stars"></div>
-                    <div class="twinkling"></div>  -->
                 </div>
-                <!-- <div id="canvas">
-                    <img src="img/bg_mount.png" class="mainMt">
-                </div> -->
-
                 <div class="section_inner">
                     <div class="swiper-container sec1Swiper">
                         <div class="swiper-wrapper">
@@ -137,10 +130,9 @@
                     </div>
                 </div>
                 <div class="rightImg">  
-                    <div>
-                        <img src="img/sec2_ball.png" alt="ballimg" class="ball ani after">
-                        <img src="img/circle.png" alt="circleAni" class="circle">
-                    </div>
+                    <img src="img/sec2_ball.png" alt="ballimg" class="ball pcImg">
+                    <img src="img/sec2_ball.png" alt="ballimg" class="ball moImg">
+                    <img src="img/circle.png" alt="circleAni" class="circle">
                 </div>
                 <p class="cpyright">Copyright © JAMONGLAB INC. All Rights Reserved.</p>
             </div> 
@@ -324,6 +316,7 @@
   <script src="js/jquery-3.6.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script> 
