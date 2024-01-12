@@ -208,6 +208,23 @@
     <script type="text/javascript" src="js/index.js"></script> 
     <script>
       gsap.registerPlugin(ScrollTrigger);
+      // function downloadPDF() {
+        //     const element = document.body; 
+
+        //     html2canvas(element).then((canvas) => {
+        //         const imgData = canvas.toDataURL('doc/｢자몽랩｣오아시스피드 서비스소개서.pdf');
+        //         const pdf = new jspdf.jsPDF();
+        //         const imgProps= pdf.getImageProperties(imgData);
+        //         const pdfWidth = pdf.internal.pageSize.getWidth();
+        //         const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            
+        //         pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        //         pdf.save("download.pdf");
+        //     });
+        // }
+        $(function(){
+            $('html').removeClass('no-js');
+        });
     </script>
 </body>
 </html>
