@@ -582,7 +582,7 @@
   .index .section.sec4 .fp-tableCell .contact_cont>h2 {font-size: 22px;}
 
 
-  .index section .sec2.fp-completely .ani_txt {transition-delay: 0.001s;}
+  .index section .sec2.fp-completely .ani_txt {transition-delay: 0;margin-top: auto;}
   
 
 
