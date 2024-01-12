@@ -256,10 +256,23 @@
 
 
 /* 뉴스클릭 01 */
-.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img {
-    /* display: grid; */
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img {width: 100%;}
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-child(1) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
     width: 100%;
 }
+.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+
 
 
 /* 뉴스클릭 02 */
@@ -416,6 +429,11 @@
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg,
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {max-width:400px;width: 50%;}
 
+    /* 뉴스클릭 01 */
+    .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-child(4) {margin-top: -150px;}
+    
+    
+
     /* 뉴스클릭 02 */
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div:nth-child(1)>img {max-width: 160px; width:100%;margin-right: -70px;}
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div:nth-child(2)>img {max-width: 180px; width:130%;}
@@ -449,7 +467,7 @@
         
     }
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(4) {margin-left: -30px;}
-    .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(5) {width:100%; margin-left:-30px;margin-top: -195px;}
+    .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>div>img:nth-of-type(5) {width:100%; margin-left:-30px;margin-top: -218px;}
 
 }
 
@@ -596,8 +614,8 @@
     /* 퀴즈클릭 03 */
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg {
         /* grid-row: auto; */
-        /* grid-template-rows: repeat(5,44px);
-        place-items: center;
+        grid-template-rows: repeat(5,45px);
+        /*place-items: center;
         grid-template-columns: repeat(2,minmax(90px,100%)); */
         grid-template-areas:
         ". a a b"
@@ -605,22 +623,18 @@
         ". . e g"
         ". f f g";
         margin-top: 10px;
+        width: 100%;
+        max-width: 330px;
     }
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img {width: 100%;align-self: center;justify-self: center;}
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(1) {margin-left: 0;grid-area: a;width: 95px;}
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(2) {width: 156px;margin-left: -80px;grid-area: b;-webkit-animation-delay: 1s;animation-delay: 1s;}
-    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(3) {width: 174px;margin-top: 0;margin-left: -20px;grid-area: c;-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
+    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(3) {width: 174px;margin-left: -20px;grid-area: c;-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(4) {width: 154px;grid-area: d;margin-left: -20px;-webkit-animation-delay: 1.5s;animation-delay: 1.5s;} 
-    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(5) {margin-top: -25px;width: 174px;margin-left: 20px;grid-area: e;-webkit-animation-delay: 1.8s;animation-delay: 1.8s;}
-    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(6) {margin-top: -55px;width: 174px;grid-area: f;margin-left: 0;-webkit-animation-delay: 2s;animation-delay: 2s;}
-    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(7) {width: 110px;margin-top: -30px;margin-left: -40px;grid-area: g;z-index: 50;-webkit-animation-delay: 2.2s;animation-delay:2.2s;}
+    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(5) {margin-top: 0;width: 174px;margin-left: 20px;grid-area: e;-webkit-animation-delay: 1.8s;animation-delay: 1.8s;}
+    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(6) {margin-top: 0;width: 174px;grid-area: f;margin-left: 0;-webkit-animation-delay: 2s;animation-delay: 2s;}
+    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg>img:nth-of-type(7) {width: 110px;margin-top: -10px;margin-left: -40px;grid-area: g;z-index: 50;-webkit-animation-delay: 2.2s;animation-delay:2.2s;}
 
-
-
-
-
-
-    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) .slideWrap>div>div>div.rightImg {width: 100%;max-width: 330px;border: 3px solid red;}
     .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) .slideWrap>div>div>div.rightImg {width: 80%;}
 
 
@@ -640,6 +654,12 @@
     
 
     /* 뉴스클릭 */
+    /* 뉴스클릭 01 */
+    .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img:nth-child(4) {
+        -webkit-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+        width: 320px;
+    }
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div {width: 300px;}
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div:nth-child(1)>img {margin-right: -50px;width: 100px;}
     .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) .slideWrap>div>div>div.rightImg>div>div:nth-child(3)>img {margin-left: -44px;width: 100px;}

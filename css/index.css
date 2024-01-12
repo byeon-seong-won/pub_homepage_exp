@@ -140,12 +140,15 @@
 .index .section.sec2 .rightImg>img.ball.pcImg.ani {
   /* animation: bottombox ease-in-out alternate;   */
   animation-duration: 1.5s;
-  animation-fill-mode: both;
   transform-origin:center center; 
   transform-style: preserve-3d;
   animation-play-state : running;
-  -webkit-animation-name: bottombox, rotatebox;
-  -webkit-animation-duration: 3s, 6s;
+  -webkit-animation-name: rotatebox;
+  -webkit-animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+  /* animation-delay: 50ms, 1.5s; */
+  /* animation-fill-mode : forwards; */
 }
 
 
@@ -160,51 +163,46 @@
 } */
 
 
-@keyframes bottombox {
-  from {
+/* @keyframes bottombox {
+  0% {
     top: 0;
   }
-  to {
-    transform: scale(1.8);
+  100% {
+    transform: rotate(360deg) scale(1.5);
     top: 45%;
   }
 }
 @-webkit-keyframes bottombox {
-  from {
+  0% {
     top: 0;
   }
-  to {
-    transform: scale(1.8);
+  100% {
+    transform: rotate(360deg) scale(1.5);
     top: 45%;
   }
-}
+} */
+
+
+
 @keyframes rotatebox {
   0% {
-    top: 45%;
-    transform: rotate(0) scale(1.8);
-  }
-  50% {
-    top: 45%;
-    transform: rotate(360deg) scale(1.8);
+    transform: translate(-10%, -43%) rotate(0);
+ 
   }
   100% {
-    top: 45%;
-    transform: rotate(0) scale(1.8);
+    transform: translate(-10%, -43%) rotate(360deg);
+    
   }
 }
 
 @-webkit-keyframes rotatebox {
   0% {
-    top: 45%;
-    transform: rotate(0) scale(1.8);
-  }
-  50% {
-    top: 45%;
-    transform: rotate(360deg) scale(1.8);
+    transform: translate(-10%, -43%) rotate(0);
+
   }
   100% {
-    top: 45%;
-    transform: rotate(0) scale(1.8);
+    transform: translate(-10%, -43%) rotate(360deg);
+  
   }
 }
 
@@ -460,7 +458,10 @@
   /* .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt br:not(.parag) {display: none;} */
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .titleText {width: calc(100% - 80px);}
   .index .section.sec2 .rightImg>img.ball.moImb {margin-left:15.5%;opacity: 0.5;}
-  .index .section.sec2 .rightImg>img {transform: translate(9%, -43%);opacity: 0.5;}
+  .index .section.sec2 .rightImg>img {
+    /* transform: translate(9%, -43%); */
+    opacity: 0.5;
+  }
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(1) {font-size: 30px;line-height: 45px;margin-top: 2vw;}
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(2) {font-size: 18px;line-height: 26px;}
   .index .section.sec2 .fp-tableCell>div.leftText {flex: 1;}

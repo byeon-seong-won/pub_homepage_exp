@@ -205,6 +205,7 @@ $(document).ready(function() {
  
       // navigationTooltips: ['Top Tier', 'Middle Tier', 'Bottom Tier'],
       // easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+      
       onLeave: function(index, nextIndex, direction) {
         $('#fullpage').on('scroll touchmove mousewheel', function(event) {                    
           event.preventDefault();
@@ -232,6 +233,11 @@ $(document).ready(function() {
             $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
             $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
             $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
+          
+          
+            
+          
+          
           
           } 
         // about us -> 메인
@@ -377,11 +383,9 @@ $(document).ready(function() {
           $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index section .sec2 .ani_txt span').addClass('animation')
-
           $('.sub .topBtn').attr("src", "../img/sub_top.png")
           $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
 
-          $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("ani");
 
           console.log("about us임")
           $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
@@ -397,7 +401,30 @@ $(document).ready(function() {
           if($(".index .sec2").hasClass("active")) {
             $.fn.fullpage.setAllowScrolling(true); 
           } 
-         
+
+          $('.index .section.sec2 .rightImg>img.ball.pcImg').each(function (i) {
+            var $this = $(this);
+            $this.stop().delay(i * 1000).animate(
+                {
+                    top: '+=50%',
+                    left: '-=50px',
+                    width : '316px',
+                    height : '316px',
+                    transtion : '0.5s'
+                },
+                {
+                    duration: 600,
+                    start: function () {
+                        setTimeout(function () {
+                            setInterval(function () {
+                                $this.addClass('ani')
+                            }, 1000);
+                        });
+                    }
+                }
+            );
+          });
+
 
         } else {
           $('.index section .sec2 .ani_txt span').removeClass('animation')
@@ -407,7 +434,17 @@ $(document).ready(function() {
           $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
-          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("ani");
+          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeAttr('style');
+          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass('ani');
+
+          var timer = null; 
+          window.addEventListener("resize", function() {
+            var w = window.innerWidth;
+            if(w < 1600) {
+              console.log("sdfsdfsdfsdf")
+              $('.index .section.sec2 .rightImg>img.ball.pcImg').css({"display" : "none"})
+            }     
+          })  
 
         }
 
@@ -423,7 +460,7 @@ $(document).ready(function() {
             $.fn.fullpage.setAllowScrolling(true); 
           } 
           
-        
+
           // pagination  
           $('.index #fp-nav ul li a span').css({"background" : "#b2b2b2"});
           $('.index #fp-nav ul li:nth-child(3) a span').css({"background" : "#000"});
@@ -493,7 +530,17 @@ $(document).ready(function() {
           swiper3.mousewheel.enable();
         }
 
-
+        var timer = null; 
+        window.addEventListener("resize", function() {
+          // var w = window.innerWidth;
+          // if(w > 1024 ) {
+          //   $.fn.fullpage.moveTo(1)
+          // }     
+          clearTimeout(timer);
+        	timer = setTimeout(function(){
+        	document.location.reload();
+        	}, 300);
+        })
 
 
 
@@ -917,9 +964,13 @@ $(document).ready(function() {
 
   // 브라우저 resize 처리
   // window.addEventListener("resize", function() {
-  //   console.log("resizeeeeeeeeeeeeeeeee")
-  //   swiper1.slidTo(0);
-  //   console.log("slied tooooooooooooo 1")
+    
+  //   var w = window.innerWidth;
+  //   if(w > 1024 ) {
+  //     $('div.fp-scroller').css('transform','translate(0px, 0px) translateZ(0px)');
+  //     $.fn.fullpage.moveTo(0)
+  //   }
+    
   // })
 
 
