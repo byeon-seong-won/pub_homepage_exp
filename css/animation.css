@@ -310,10 +310,10 @@ section .swiper_txt span {position: relative;}
 
 @media (max-width:1023.33px) {
 
-  #stars {animation: firstStar 20s linear infinite alternate;opacity: 1;}
-  #stars2 {width: 2px;height: 2px;animation: secoStar 20s linear infinite alternate;}
+  #stars {animation: firstStar 10s linear infinite alternate;opacity: 1;}
+  #stars2 {width: 2px;height: 2px;animation: secoStar 10s linear infinite alternate;}
   #stars3 {width: 2px;height: 2px;animation: thirdStar 20s linear infinite alternate;}
-  #stars4 {animation: secoStar 20s linear infinite alternate;}
+  #stars4 {animation: secoStar 10s linear infinite alternate;}
   @keyframes firstStar {
     from {
       transform: translateX(200px) 
