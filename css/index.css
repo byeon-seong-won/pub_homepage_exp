@@ -2,6 +2,7 @@
 @import url(animation.css);
 
 
+
 /* 페이지 로딩 */
 .no-js { display:none; }
 
@@ -86,7 +87,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 
@@ -109,7 +110,7 @@
   justify-content: space-between;align-items: center;width: 100%; height: 100%;
   padding: 0 60px;box-sizing: border-box;}
 .index .section.sec2 .fp-tableCell>div {height: 100%;}
-.index .section.sec2 .fp-tableCell>div.leftText {position:absolute; width:100%; display: table; z-index:999999; }
+.index .section.sec2 .fp-tableCell>div.leftText {position:absolute; width:100%; display: table; z-index:999; }
 .index .section.sec2 .fp-tableCell>div.leftText .tableCell {display: table-cell;vertical-align: middle;}
 .index .section.sec2 .fp-tableCell>div.leftText .tableCell .titleText {width:100%; display: flex; justify-content: space-between;width:calc(100% - 120px);position:absolute;box-sizing: border-box;}
 .index .section.sec2 .fp-tableCell>div.leftText .tableCell>h2 {/*margin-top: 40px;*/
@@ -547,6 +548,7 @@
 
 /* mobile */
 @media (max-width:767.33px) {
+
 
 
   /* 페이지 로딩 */
