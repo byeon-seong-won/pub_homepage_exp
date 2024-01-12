@@ -552,7 +552,7 @@
 
 
   /* 페이지 로딩 */
-  /* .no-js { display:block; } */
+  .no-js { display:block; }
 
   .mainMt {object-fit: cover;}
 
