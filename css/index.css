@@ -549,6 +549,9 @@
 @media (max-width:767.33px) {
 
 
+  /* 페이지 로딩 */
+  .no-js { display:block; }
+
   .mainMt {object-fit: cover;}
 
   .sec2 .Icon {width: calc(100% - 80px);}
