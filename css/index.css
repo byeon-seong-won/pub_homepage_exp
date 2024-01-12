@@ -2,7 +2,8 @@
 @import url(animation.css);
 
 
-
+/* 페이지 로딩 */
+.no-js { display:none; }
 
 
 .index .topBtn {	
