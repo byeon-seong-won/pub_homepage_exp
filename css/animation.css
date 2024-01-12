@@ -184,7 +184,6 @@ section .swiper_txt span {position: relative;}
 
 
 /* 메인 배경 애니메이션 */
-
 #stars {
   position: absolute;
   width: 3px;
@@ -339,7 +338,7 @@ section .swiper_txt span {position: relative;}
     }
   
     to {
-      transform: translate(300px,200px) scale(1);
+      transform: translate(200px,200px) scale(1);
     }
   }
 }
