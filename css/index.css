@@ -110,7 +110,8 @@
 .index .section.sec2 .fp-tableCell>div.leftText {position:absolute; width:100%; display: table; z-index:999999; }
 .index .section.sec2 .fp-tableCell>div.leftText .tableCell {display: table-cell;vertical-align: middle;}
 .index .section.sec2 .fp-tableCell>div.leftText .tableCell .titleText {width:100%; display: flex; justify-content: space-between;width:calc(100% - 120px);position:absolute;box-sizing: border-box;}
-.index .section.sec2 .fp-tableCell>div.leftText .tableCell>h2 {/*margin-top: 40px;*/letter-spacing: normal;font-family: 'Nanum Myeongjo', serif;font-size: 40px;font-size: 400;color: rgba(0,0,0,0.7);font-style: italic;}
+.index .section.sec2 .fp-tableCell>div.leftText .tableCell>h2 {/*margin-top: 40px;*/
+  letter-spacing: normal;font-family: 'Nanum Myeongjo', serif;font-size: 40px;font-size: 400;color: rgba(0,0,0,0.7);font-style: italic;}
 
 
 .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(1) {line-height: 50px;letter-spacing: -0.05em;text-align: left;display: block;margin-top: 3.1vw;font-family: 'noto sans KR', sans-serif;font-size: 34px;font-weight: bold;color: #000;}
@@ -579,7 +580,7 @@
   .index .section.sec4 .fp-tableCell .contact_cont>h2 {font-size: 22px;}
 
 
-
+  .index section .sec2.fp-completely .ani_txt {transition-delay: 0.1s;}
   
 
 
