@@ -256,6 +256,7 @@ $(document).ready(function() {
             
 
             if($(".index .sec2").hasClass("active")) {
+              $.fn.fullpage.setAllowScrolling(false); 
               swiper1.slideTo(0);
             }
             if($(".sub .sec2").hasClass("active")) {
