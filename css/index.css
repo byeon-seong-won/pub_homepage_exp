@@ -468,7 +468,7 @@
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size:30px;line-height:62px;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img {
     width: 72px; width:60px; transform:translateY(0);}
-  .index .swiper-slide {height: 100% !important;border: 2px solid red;}
+  .index .swiper-slide {height: 100% !important;}
   .index .sec1Swiper img.logo {width: 817px;}
 
   /* section 2 about us */
