@@ -353,7 +353,7 @@ section .swiper_txt span {position: relative;}
     }
   
     to {
-      transform: translateX(0) rotate3d(50px, 50px, 50px); 
+      transform: translateX(0) rotate3d(20px, 20px, 20px); 
     }
   }
 
