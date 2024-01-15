@@ -399,7 +399,7 @@ $(document).ready(function() {
 
           // 공 애니메이션
           $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("start")
-          setTimeout(() => $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("ani"), 2100);
+          setTimeout(() => $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("ani"), 1500);
         
         } else {
           $('.index section .sec2 .ani_txt span').removeClass('animation')
