@@ -398,8 +398,8 @@ $(document).ready(function() {
           if($(".index .sec2").hasClass("active")) {$.fn.fullpage.setAllowScrolling(true); } 
 
           // 공 애니메이션
-          $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("start")
-          setTimeout(() => $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("ani"), 1500);
+          // $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("start")
+          // setTimeout(() => $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("ani"), 1500);
         
         } else {
           $('.index section .sec2 .ani_txt span').removeClass('animation')
@@ -411,8 +411,8 @@ $(document).ready(function() {
           $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
 
           // 공 애니메이션
-          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("start");
-          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("ani");
+          // $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("start");
+          // $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("ani");
 
           // $('.index .section.sec2 .rightImg>img.ball.pcImg').removeAttr('style');
           // $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass('ani');

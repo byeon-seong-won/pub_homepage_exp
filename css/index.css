@@ -123,19 +123,35 @@
 .index .section.sec2 .rightImg>img.moCircle {display: none;}
 
 .index .section.sec2 {position:relative;}
-.index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -50%);}
+.index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);}
 .index .section.sec2 .rightImg>img.circle_front {z-index: 1000;}
 .index .section.sec2 .rightImg>img.circle_back {z-index: 10;}
-.index .section.sec2 .rightImg>img.ball.pcImg {
+/* .index .section.sec2 .rightImg>img.ball.pcImg {
   transition: 0.2s;
-  /* margin-top:34px; */
+
   margin-top: -50px;
   margin-left:200px;
-  width: 155px;
-  height: 155px;
+  width: 316px;
+  height: 316px;
   top: 0;
   z-index: 100;
+} */
+
+.index .section.sec2 .rightImg>img.ball.pcImg {
+  animation: rotatebox ease-in-out infinite alternate;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  animation-play-state: running;
+  transition: 0.2s;
+  margin-top: 34px;
+  margin-left: 143px;
+  z-index: 100;
 }
+
+
+
 .index .section.sec2 .rightImg>img.ball.pcImg.start {
   animation-duration: 1.5s;
   transform-origin:center center; 
@@ -174,7 +190,7 @@
 } */
 
 
-@keyframes bottombox {
+/* @keyframes bottombox {
   0% {top: 0;}
   99% {
     margin-left: 150px;
@@ -201,54 +217,24 @@
     width: 316px;
     height: 316px;
   }
-}
+}*/
 
 @keyframes rotatebox {
   0% {
-    top: 40%;
-    margin-left: 150px;
-    transform: rotate(0);
-    width: 316px;
-    height: 316px;
-  }
-  50% {
-    top: 40%;
-    margin-left: 150px;
-    transform: rotate(180deg);
-    width: 316px;
-    height: 316px;
+    transform: translate(0, -43%) rotate(0);
   }
   100% {
-    top: 40%;
-    margin-left: 150px;
-    transform: rotate(360deg);
-    width: 316px;
-    height: 316px;
+      transform: translate(0, -43%) rotate(360deg);
   }
 }
 @-webkit-keyframes rotatebox {
   0% {
-    top: 40%;
-    margin-left: 150px;
-    transform: rotate(0);
-    width: 316px;
-    height: 316px;
-  }
-  50% {
-    top: 40%;
-    margin-left: 150px;
-    transform: rotate(180deg);
-    width: 316px;
-    height: 316px;
+    transform: translate(0, -43%) rotate(0);
   }
   100% {
-    top: 40%;
-    margin-left: 150px;
-    transform: rotate(360deg);
-    width: 316px;
-    height: 316px;
+      transform: translate(0, -43%) rotate(360deg);
   }
-}
+} 
 
 
 

@@ -531,10 +531,10 @@
 
 
     /* 우측 이미지 사이즈 */
-    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {width: 100%;max-width: 350px;}
-    .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {width: 100%;}
+    .sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {width: 100%;max-width: 350px; margin-top:-7%;}
+    .sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {width: 100%;max-width: 350px; margin-top:-7%;}
 
-    .sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {width: 100%;}
+    .sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div>div>div.rightImg {width: 100%;max-width: 350px; margin-top:-7%;}
 
 
 
