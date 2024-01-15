@@ -132,15 +132,26 @@
 
 .index .section.sec2 {position:relative;}
 .index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);}
-.index .section.sec2 .rightImg>img.circle {z-index: 1000;}
-.index .section.sec2 .rightImg>img.ball.pcImg  {
+.index .section.sec2 .rightImg>img.circle {z-index: 1000;border: 3px solid red;}
+.index .section.sec2 .rightImg>img.ball.pcImg {
   transition: 0.2s;
   margin-top:34px;
-  margin-left:210px;
+  margin-left:225px;
   width: 175px;
   height: 175px;
   top: 0;
+
 }
+/* .index .section.sec2 .rightImg>img.ball.pcImg.start {
+  animation-duration: 1.5s;
+  transform-origin:center center; 
+  transform-style: preserve-3d;
+  animation-play-state : running;
+  -webkit-animation-name: rotatebox;
+  -webkit-animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+} */
 .index .section.sec2 .rightImg>img.ball.pcImg.ani {
   /* animation: bottombox ease-in-out alternate;   */
   animation-duration: 1.5s;
@@ -154,6 +165,13 @@
   /* animation-delay: 50ms, 1.5s; */
   /* animation-fill-mode : forwards; */
 }
+
+
+
+
+
+
+
 
 
 /* .index .section.sec2 .rightImg>img.ball.pcImg.after {
@@ -216,10 +234,7 @@
 
 
 
-/* pc 이하 공 애니메이션 */
-
-
-
+/* 1600px 이하 공 애니메이션 (회전만)*/
 @media (max-width:1599.33px) {
 
   
@@ -453,7 +468,7 @@
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size:30px;line-height:62px;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img {
     width: 72px; width:60px; transform:translateY(0);}
-  .index .swiper-slide {height: 95% !important;}
+  .index .swiper-slide {height: 100% !important;border: 2px solid red;}
   .index .sec1Swiper img.logo {width: 817px;}
 
   /* section 2 about us */
