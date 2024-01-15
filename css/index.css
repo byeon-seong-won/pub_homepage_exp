@@ -119,6 +119,8 @@
 /* /////////// 공 애니메이션 /////////// */
 .index .section.sec2 .rightImg>img.ball.pcImg {display: block;}
 .index .section.sec2 .rightImg>img.ball.moImg {display: none;}
+.index .section.sec2 .rightImg>img.pcCircle {display: block;}
+.index .section.sec2 .rightImg>img.moCircle {display: none;}
 
 .index .section.sec2 {position:relative;}
 .index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -50%);}
@@ -141,9 +143,10 @@
   animation-play-state : running;
   -webkit-animation-name: bottombox;
   -webkit-animation-duration: 2s;
-  animation-direction: ease-in-out;
+  /* animation-direction: ease-in-out; */
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.05, .88, .89, .19);
+  /* animation-timing-function: cubic-bezier(0, .8, .89, .19); */
+  animation-timing-function: cubic-bezier(.3,.87,.73,.39);
 }
 .index .section.sec2 .rightImg>img.ball.pcImg.ani {
   animation-duration: 1.5s;
@@ -266,6 +269,8 @@
   
   .index .section.sec2 .rightImg>img.ball.pcImg {display: none;}
   .index .section.sec2 .rightImg>img.ball.moImg {display: block;}
+  .index .section.sec2 .rightImg>img.pcCircle {display: none;}
+  .index .section.sec2 .rightImg>img.moCircle {display: block;}
 
 
   .index .section.sec2 {position:relative;}
@@ -313,7 +318,7 @@
     margin-top:1.9%;
   }
 
-  .index .section.sec2 .rightImg>img.circle {
+  .index .section.sec2 .rightImg>img.moCircle {
     width:40%;
   }
 }
@@ -743,7 +748,7 @@
     
     .index .section.sec2 .rightImg>img {transform: translate(-50%, 120px); left:50%; top:0;}
     .index .section.sec2 .rightImg>img.ball.moImg {width:114px; margin-top:213px; margin-left:-57px;}
-    .index .section.sec2 .rightImg>img.circle {width:270px;}
+    .index .section.sec2 .rightImg>img.moCircle {width:270px;}
 
   .sec2 .Icon {width: calc(100% - 40px);}
   .sec2 .Icon li:nth-child(2) {left:calc(100% - 5px);}
