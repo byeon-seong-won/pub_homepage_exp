@@ -21,7 +21,7 @@ section .swiper_txt span {position: relative;}
   display: block;
   width: 100%;
   height: 98%;
-  background: #fff;
+  /* background: #fff; */
   position: absolute;
   top: 0;
   left: 0;
@@ -70,7 +70,7 @@ section .swiper_txt span {position: relative;}
 
 .index section .sec3 .ani_txt span::after,
 .index section .sec2 .ani_txt span::after {
-  background-color: #000;
+  /* background-color: #000; */
   -webkit-transform-origin: left center;
   transform-origin: left center;
   transition: all ease .7s;
@@ -83,7 +83,7 @@ section .swiper_txt span {position: relative;}
 
 
 .index section .sec4 .ani_txt span.animation::after {
-    background-color: #fff;
+    /* background-color: #fff; */
     -webkit-transform-origin: left center;
     transform-origin: left center;
 }
@@ -126,7 +126,7 @@ section .swiper_txt span {position: relative;}
   display: block;
   width: 100%;
   height: 90%;
-  background: #fff;
+  /* background: #fff; */
   position: absolute;
   top: 0;
   left: 0;
@@ -138,7 +138,7 @@ section .swiper_txt span {position: relative;}
   display: block;
   width: 100%;
   height: 90%;
-  background: #000;
+  /* background: #000; */
   position: absolute;
   top: 0;
   left: 0;
@@ -713,9 +713,8 @@ section .swiper_txt span {position: relative;}
         1856px 974px #fff, 340px 663px #fff, 1579px 1091px #fff, 809px 111px #fff,
         32px 1128px #fff, 69px 1852px #fff, 878px 300px #fff, 730px 726px #fff,
         1137px 68px #fff;
-
   }
-  
+
   #stars2 {
     width: 2px;
     height: 2px;
@@ -909,4 +908,5 @@ section .swiper_txt span {position: relative;}
         transform: translateY(-800px);
       }
     }
+    
 }
