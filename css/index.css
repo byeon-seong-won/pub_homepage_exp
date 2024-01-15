@@ -468,7 +468,7 @@
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size:30px;line-height:62px;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img {
     width: 72px; width:60px; transform:translateY(0);}
-  .index .swiper-slide {height: 100% !important;}
+  .index .swiper-slide {height: 95% !important;}
   .index .sec1Swiper img.logo {width: 817px;}
 
   /* section 2 about us */
@@ -564,7 +564,8 @@
 
 
   /* 페이지 로딩 */
-  .no-js { display:block; }
+  /* .no-js { display:block; } */
+
 
   .mainMt {object-fit: cover;}
 
@@ -661,6 +662,7 @@
   .index .section.sec3 .fp-tableCell .tableCell .service_cont .mobile_service .mobileBoxcont .swiper-slide .serviceBox>div>div>p.spacing span {
     letter-spacing: -0.1em;
   }
+  .index .swiper-slide {height: 100% !important;}
 }
 
 
