@@ -6,7 +6,6 @@
 /* 페이지 로딩 */
 /* .no-js { display:none; } */
 
-
 .index .topBtn {	
   width:60px;
 	right:60px;
@@ -56,19 +55,13 @@
 .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt {margin-bottom: 50px;}
 .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
   font-size: 6rem;
-  /* text-shadow: -0.11rem 0px #fff, 0px 0.11rem #fff, 0.11rem 0px #fff, 0px -0.11rem #fff; */
   text-shadow:-1.5px 0px #fff,1.5px 0px #fff,0px -1.5px #fff,0px 1.5px #fff;
   font-weight: bold;letter-spacing: normal;
   line-height: 49px;
 }
 
 .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {text-shadow: none;color: #fff;font-size: 54px;line-height: 100px;text-align: center;font-weight: 500;}
-.index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img{transform: translateY(-6px);}
-
-
-/* .index .section.sec1 .section_inner .swiper-slide {border: 3px solid red;}
-.index .section.sec1 .section_inner .swiper-slide .swiperwrapper {border: 3px solid blue;} */
-
+.index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 img {transform: translateY(-6px);}
 .background-container {
   position: absolute;
   top: 0;
@@ -80,7 +73,6 @@
   background-color: #000;
   background: url(../img/mainBg.png);
 }
-
 .mainMt {
   width: 100%;
   height: 100%;
@@ -124,36 +116,36 @@
 
 
 
-
-
 /* /////////// 공 애니메이션 /////////// */
 .index .section.sec2 .rightImg>img.ball.pcImg {display: block;}
 .index .section.sec2 .rightImg>img.ball.moImg {display: none;}
 
 .index .section.sec2 {position:relative;}
-.index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);}
-.index .section.sec2 .rightImg>img.circle {z-index: 1000;border: 3px solid red;}
+.index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -50%);}
+.index .section.sec2 .rightImg>img.circle_front {z-index: 1000;}
+.index .section.sec2 .rightImg>img.circle_back {z-index: 10;}
 .index .section.sec2 .rightImg>img.ball.pcImg {
   transition: 0.2s;
-  margin-top:34px;
-  margin-left:225px;
+  /* margin-top:34px; */
+  margin-top: -50px;
+  margin-left:200px;
   width: 175px;
   height: 175px;
   top: 0;
-
+  z-index: 100;
 }
-/* .index .section.sec2 .rightImg>img.ball.pcImg.start {
+.index .section.sec2 .rightImg>img.ball.pcImg.start {
   animation-duration: 1.5s;
   transform-origin:center center; 
   transform-style: preserve-3d;
   animation-play-state : running;
-  -webkit-animation-name: rotatebox;
+  -webkit-animation-name: bottombox;
   -webkit-animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count:infinite;
-} */
+  animation-direction: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.05, .88, .89, .19);
+}
 .index .section.sec2 .rightImg>img.ball.pcImg.ani {
-  /* animation: bottombox ease-in-out alternate;   */
   animation-duration: 1.5s;
   transform-origin:center center; 
   transform-style: preserve-3d;
@@ -162,15 +154,8 @@
   -webkit-animation-duration: 2s;
   animation-direction: alternate;
   animation-iteration-count:infinite;
-  /* animation-delay: 50ms, 1.5s; */
-  /* animation-fill-mode : forwards; */
+  animation-timing-function: linear;
 }
-
-
-
-
-
-
 
 
 
@@ -185,46 +170,87 @@
 } */
 
 
-/* @keyframes bottombox {
+@keyframes bottombox {
   0% {
     top: 0;
   }
+  70% {
+    margin-left: 150px;
+    width: 316px;
+    height: 316px;
+  }
   100% {
-    transform: rotate(360deg) scale(1.5);
-    top: 45%;
+    margin-left: 150px;
+    transform: rotate(360deg);
+    top: 35%;
+    width: 316px;
+    height: 316px;
   }
 }
 @-webkit-keyframes bottombox {
   0% {
     top: 0;
   }
-  100% {
-    transform: rotate(360deg) scale(1.5);
-    top: 45%;
+  70% {
+    margin-left: 150px;
+    width: 316px;
+    height: 316px;
   }
-} */
+  100% {
+    margin-left: 150px;
+    transform: rotate(360deg);
+    top: 35%;
+    width: 316px;
+    height: 316px;
+  }
+}
 
 
 
 @keyframes rotatebox {
   0% {
-    transform: translate(-10%, -43%) rotate(0);
- 
+    top: 40%;
+    margin-left: 150px;
+    transform: rotate(0);
+    width: 316px;
+    height: 316px;
+  }
+  50% {
+    top: 40%;
+    margin-left: 150px;
+    transform: rotate(180deg);
+    width: 316px;
+    height: 316px;
   }
   100% {
-    transform: translate(-10%, -43%) rotate(360deg);
-    
+    top: 40%;
+    margin-left: 150px;
+    transform: rotate(360deg);
+    width: 316px;
+    height: 316px;
   }
 }
-
 @-webkit-keyframes rotatebox {
   0% {
-    transform: translate(-10%, -43%) rotate(0);
-
+    top: 40%;
+    margin-left: 150px;
+    transform: rotate(0);
+    width: 316px;
+    height: 316px;
+  }
+  50% {
+    top: 40%;
+    margin-left: 150px;
+    transform: rotate(180deg);
+    width: 316px;
+    height: 316px;
   }
   100% {
-    transform: translate(-10%, -43%) rotate(360deg);
-  
+    top: 40%;
+    margin-left: 150px;
+    transform: rotate(360deg);
+    width: 316px;
+    height: 316px;
   }
 }
 
@@ -244,7 +270,9 @@
 
   .index .section.sec2 {position:relative;}
   .index .section.sec2 .rightImg>img {position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);transition: 0.5s;}
-  .index .section.sec2 .rightImg>img.circle {z-index: 1000;}
+  /* .index .section.sec2 .rightImg>img.circle {z-index: 1000;} */
+  .index .section.sec2 .rightImg>img.circle_front {z-index: 1000;}
+  .index .section.sec2 .rightImg>img.circle_back {z-index: 10;}
   .index .section.sec2 .rightImg>img.ball.moImg {
     animation: rotatebox ease-in-out infinite alternate;
     animation-duration: 5s;
