@@ -398,33 +398,9 @@ $(document).ready(function() {
             $.fn.fullpage.setAllowScrolling(true); 
           } 
 
-          $('.index .section.sec2 .rightImg>img.ball.pcImg').each(function (i) {
-            var $this = $(this);
-            var w = window.innerWidth;
-            if(w >= 1600) {
-              $this.stop().delay(i * 500).animate(
-                {
-                    top: '+=50%',
-                    left: '-=50px',
-                    width : '316px',
-                    height : '316px',
-                    transtion : '0.5s'
-                },
-                {
-                    duration: 700,
-                    start: function () {
-                        setTimeout(function () {
-                            setInterval(function () {
-                                $this.addClass('ani')
-                            }, 1000);
-                        });
-                    }
-                }
-              );
-            }
-           
-          });
-
+          // 공 애니메이션
+          $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("start")
+          setTimeout(() => $('.index .section.sec2 .rightImg>img.ball.pcImg').addClass("ani"), 2100);
 
         } else {
           $('.index section .sec2 .ani_txt span').removeClass('animation')
@@ -436,6 +412,11 @@ $(document).ready(function() {
           $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.index .section.sec2 .rightImg>img.ball.pcImg').removeAttr('style');
           $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass('ani');
+
+
+          // 공 애니메이션
+          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("start");
+          $('.index .section.sec2 .rightImg>img.ball.pcImg').removeClass("ani");
 
           // var timer = null; 
           // window.addEventListener("resize", function() {
