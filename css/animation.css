@@ -273,29 +273,24 @@ section .swiper_txt span {position: relative;}
   from {
     transform: translateX(400px) 
   }
-
   to {
     transform: translateX(0) rotate3d(100px, 150px, 30px); 
   }
 }
 
-
 @keyframes secoStar {
   from {
     transform: translate(500px,500px) rotate3d(300px, 10px, 60px);
   }
-
   to {
     transform: translate(1000px,500px);
   }
 }
 
-
 @keyframes thirdStar {
   from {
     transform: translate(0,0) scale(0.3);
   }
-
   to {
     transform: translate(1000px,1000px) scale(1);
   }

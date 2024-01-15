@@ -4,7 +4,7 @@
 
 
 /* 페이지 로딩 */
-.no-js { display:none; }
+/* .no-js { display:none; } */
 
 
 .index .topBtn {	
@@ -505,11 +505,8 @@
     width:74px;
   }
 
-  .index .section.sec3 .fp-tableCell .tableCell .service_cont .mobile_service .mobileBoxcont .swiper-slide .serviceBox>div>div>h1{
-    font-size:20px; font-weight:800;}
-  .index .section.sec3 .fp-tableCell .tableCell .service_cont .mobile_service .mobileBoxcont .swiper-slide .serviceBox>div>div>p{
-    font-size:15px;
-  }
+  .index .section.sec3 .fp-tableCell .tableCell .service_cont .mobile_service .mobileBoxcont .swiper-slide .serviceBox>div>div>h1 {font-size:20px; font-weight:800;}
+  .index .section.sec3 .fp-tableCell .tableCell .service_cont .mobile_service .mobileBoxcont .swiper-slide .serviceBox>div>div>p {font-size:15px;}
 
   .index .section.sec3 .fp-tableCell .tableCell .service_cont .mobile_service .mobileBoxcont .swiper-slide .serviceBox>div>div.service_text{
     margin-top:40px;
