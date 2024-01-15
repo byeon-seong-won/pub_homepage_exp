@@ -84,7 +84,7 @@
     transform: translateY(23.5vh);
     z-index:9999999999999;
 }
-.sub .section.sec2 .section_inner a {
+.sub .section.sec2 .section_inner button {
     background-color: transparent; border: 0.11rem solid #f16365;
     border-radius: 60px;padding: 10px 30px;
     color: #f16365;font-size: 20px;font-weight: bold;
