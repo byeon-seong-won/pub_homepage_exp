@@ -906,8 +906,7 @@ section .swiper_txt span {position: relative;}
         transform: translateY(0);
       }
       to {
-        transform: translateY(-2000px);
+        transform: translateY(-800px);
       }
     }
-    
 }
