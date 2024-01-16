@@ -35,9 +35,9 @@ $(document).ready(function() {
         // 메인 -> about us
         if (index == 1 && direction == 'down'){
             // header
-            $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
+            $('.index header nav h1 a img').attr("src", "./img/logo_black.png")
             //$('.sub .topBtn').attr("src", "../img/logo_black.png")
-            $('.sub header nav h1 a img').attr("src", "../img/logo_black.png")
+            $('.sub header nav h1 a img').attr("src", "./img/logo_black.png")
             $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
             $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
             $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
@@ -57,9 +57,9 @@ $(document).ready(function() {
         else if (index == 2 && direction == 'up'){
           
             // header
-            $('.index header nav h1 a img').attr("src", "../img/logo.png")
+            $('.index header nav h1 a img').attr("src", "./img/logo.png")
             //$('.sub .topBtn').attr("src", "../img/logo.png")
-            $('.sub header nav h1 a img').attr("src", "../img/logo.png")
+            $('.sub header nav h1 a img').attr("src", "./img/logo.png")
             $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
             $('.index header nav ul li').css({"border" : "none"})
 
@@ -96,7 +96,7 @@ $(document).ready(function() {
         // about us -> services
         else if (index == 2 && direction == 'down'){
           // header
-          $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
@@ -110,7 +110,7 @@ $(document).ready(function() {
         // services -> about us
         else if (index == 3 && direction == 'up'){
           // header
-          $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
@@ -126,7 +126,7 @@ $(document).ready(function() {
         // services -> contact
         if (index == 3 && direction == 'down'){
           // header
-          $('.index header nav h1 a img').attr("src", "../img/logo.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo.png")
           $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('.index header nav ul li:nth-child(4) a').css({"color" : "#fff"});
           $('.index header nav ul li:nth-child(4)').css({"border-bottom" : "solid 0.25rem #fff"})
@@ -140,7 +140,7 @@ $(document).ready(function() {
         // contact -> services
         else if (index == 4 && direction == 'up'){
           // header
-          $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
@@ -163,7 +163,7 @@ $(document).ready(function() {
         if(index == 1) {
           
           // header
-          $('.index header nav h1 a img').attr("src", "../img/logo.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo.png")
           $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('.sub header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('.index header nav ul li').css({"border" : "none"})
@@ -173,7 +173,7 @@ $(document).ready(function() {
           $('.index #fp-nav ul li:nth-child(1) span').css({"background" : "#fff"});
           $('.index #fp-nav ul li').css({"border" : "none"});
           $('.index #fp-nav ul li:nth-child(1)').css({"border" : "solid 0.1rem #fff", "border-radius" : "50%"});
-          $('.sub .topBtn').attr("src", "../img/top_btn_white.png")
+          $('.sub .topBtn').attr("src", "./img/top_btn_white.png")
           $('.sub section .sec2 .ani_txt.ani_txt01 span').removeClass('animation')
           $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
@@ -191,13 +191,13 @@ $(document).ready(function() {
         // about us 텍스트 애니메이션
         if(index == 2) {
           // header
-          $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo_black.png")
           $('.sub header nav ul li a').css({"color" : "rgba(0,0,0,0.5)"});
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(2) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(2)').css({"border-bottom" : "solid 0.25rem #171717"})
           $('.index section .sec2 .ani_txt span').addClass('animation')
-          $('.sub .topBtn').attr("src", "../img/sub_top.png")
+          $('.sub .topBtn').attr("src", "./img/sub_top.png")
           $('.sub section .sec2 .ani_txt.ani_txt01 span').addClass('animation')
 
 
@@ -250,7 +250,7 @@ $(document).ready(function() {
 
         // services 애니메이션
         if(index == 3) {
-          $('.index header nav h1 a img').attr("src", "../img/logo_black.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo_black.png")
           $('.index header nav ul li a').css({"color" : "rgba(30, 30, 30,0.5)"});
           $('.index header nav ul li:nth-child(3) a').css({"color" : "#1e1e1e"});
           $('.index header nav ul li:nth-child(3)').css({"border-bottom" : "solid 0.25rem #171717"})
@@ -274,7 +274,7 @@ $(document).ready(function() {
 
         // contact 애니메이션
         if(index == 4) {
-          $('.index header nav h1 a img').attr("src", "../img/logo.png")
+          $('.index header nav h1 a img').attr("src", "./img/logo.png")
           $('.index header nav ul li a').css({"color" : "rgba(255,255,255,0.5)"});
           $('.index header nav ul li:nth-child(4) a').css({"color" : "#fff"});
           $('.index header nav ul li:nth-child(4)').css({"border-bottom" : "solid 0.25rem #fff"})
