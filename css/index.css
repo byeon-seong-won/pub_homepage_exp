@@ -20,34 +20,6 @@
 .index .mobilelogo {display: none;}
 .index .nomobileTitle {display: block;}
 .index .mobileTitle {display: none;}
-/* .index .section.sec1 {
-    background : url(../img/mainBg.png) center center;
-    z-index: -1;
-    background-color: #000;
-    background-size:cover;
-    -webkit-animation: slidein 100s alternate;
-    animation: slidein 100s alternate;
-    transform-origin: 100% 100%;
-
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;            
-}
-
-@-webkit-keyframes slidein {
-  from {background-position: center -500px; background-size:2500px;}
-  to {background-position: 2000px top;background-size:2500px;}
-}
-@keyframes slidein {
-  from {background-position: center -500px;background-size:2500px;}
-  to {background-position: 2000px top;background-size:2500px;}
-} */
-
 
 .index .section.sec1 .fp-tableCell {position: relative;height: auto !important;}
 .index .section.sec1 .fp-tableCell>img {position: absolute;left: 0;bottom: 0;width: 100%;}
@@ -73,6 +45,12 @@
   background-color: #000;
   background: url(../img/mainBg.png);
 }
+canvas {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;  
+}
 .mainMt {
   width: 100%;
   height: 100%;
@@ -81,8 +59,6 @@
   left: 0;
   z-index: 100;
 }
-
-
 
 
 
@@ -715,7 +691,7 @@
    
 
     .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {
-      /* font-size: 2rem; */
+      font-weight: 900;
       font-size: 2.03rem;
       text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;
     }
