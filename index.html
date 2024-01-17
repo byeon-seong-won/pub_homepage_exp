@@ -24,7 +24,7 @@
 <body class="index">
     <header>
         <nav>
-            <h1><a href="index.html"><img src="./img/logo.png" alt="logo"></a></h1>
+            <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
             <ul id="menu">
                 <li data-menuanchor="sec1" class="active" style="display: none;"><a href="#sec1"></a></li>
                 <li data-menuanchor="sec2"><a href="#sec2">About</a></li>
@@ -36,7 +36,7 @@
     <section>
 
         <!-- top btn -->
-        <img src="./img/idx_top.png" alt="topBtn" class="topBtn" onclick="location.href='index.html'">
+        <img src="img/idx_top.png" alt="topBtn" class="topBtn" onclick="location.href='index.html'">
         <!-- // top btn -->
 
         <div id="fullpage">
@@ -47,13 +47,16 @@
                     <canvas id="canvas"></canvas>
                     <img src="img/bg_mount.png" class="mainMt">
                 </div>
+                <div class="background-container mobile">
+                    <img src="img/bg_mount.png" class="mainMt">
+                </div>
                 <div class="section_inner">
                     <div class="swiper-container sec1Swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" id="slide01">
                                 <div class="ani_txt"><span>스스로 꿈꾸는 연구소</span></div>
-                                <img loading="lazy" id="logo" class="logo" src="./img/logo.png" alt="logo">
-                                <img loading="lazy" id="logo" class="mobilelogo" src="./img/mobile_logo.png" alt="logo">
+                                <img loading="lazy" id="logo" class="logo" src="img/logo.png" alt="logo">
+                                <img loading="lazy" id="logo" class="mobilelogo" src="img/mobile_logo.png" alt="logo">
                             </div>
                             <div class="swiper-slide">
                                 <div class="swiperwrapper swiper_txt">
@@ -97,11 +100,6 @@
                             <li><img src="img/plusIcon.png" alt="icon" class="plusIcon"></li>
                             <li>&nbsp;</li>
                         </ul>
-                        <!--div class="titleText">
-                            <div><img src="img/plusIcon.png" alt="icon" class="plusIcon"></div>
-                            <div><img src="img/plusIcon.png" alt="icon" class="plusIcon"></div>
-                            <div class="mobileIcon"><img src="img/plusIcon.png" alt="icon" class="plusIcon"></div>
-                        </div-->
                         <h2>About us</h2>
                         <div>
                             <div class="ani_txt spacing">
@@ -126,11 +124,8 @@
                     </div>
                 </div>
                 <div class="rightImg">  
-                    <img src="img/circle_back.png" alt="circle" class="pcCircle circle_back">
-                    <img src="img/sec2_ball.png" alt="ballimg" class="ball pcImg">
-                    <img src="img/sec2_ball.png" alt="ballimg" class="ball moImg">
-                    <img src="img/circle_front.png" alt="circle" class="pcCircle circle_front">
-                    <img src="img/circle.png" alt="circle" class="moCircle"> 
+                    <canvas id="c"></canvas> 
+                    <img src="img/sec2_ball.png" alt="ballimg" class="ball">
                 </div>
                 <p class="cpyright">Copyright © JAMONGLAB INC. All Rights Reserved.</p>
             </div> 
@@ -301,9 +296,6 @@
                                 </div>
                             </li>
                             <li>&nbsp;</li>
-                            <!--li style="display: none;" class="mobileIcon">
-                                <img src="img/plusIcon.png" alt="icon" class="plusIcon">
-                            </li-->
                         </ul>
                     </div>
                 </div>
@@ -317,7 +309,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script type="text/javascript" src="js/index.js"></script> 
+    <script type="text/javascript" src="js/ballAni.js"></script> 
+   
    
     <script>
     // 배경 애니메이션
@@ -332,24 +328,13 @@
     shapes = [],
     numShapes = 1000;
 
-    if($(window).width() < 560) {
-        for (let i = 0; i < numShapes; i++) {
-            shapes[i] = {
-                x: rand(-3000,3000),
-                y: rand(-3000,3000),
-                z: rand(0,10000)
-            };
-        }   
-    } else {
-        for (let i = 0; i < numShapes; i++) {
-            shapes[i] = {
-              x: rand(-5000, 5000),
-              y: rand(-5000, 5000),
-              z: rand(0, 10000)
-            };
-        }   
+    for(let i=0;i<numShapes;i++){
+      shapes[i] = {
+        x: rand(-5000,5000),
+        y: rand(-5000,5000),
+        z: rand(0,10000)
+      }
     }
-
 
     ctx.translate(cX, cY);
 
@@ -362,26 +347,26 @@
     resetFrame();
     }
     function update() {
-    ctx.fillStyle = "#ffffff";
-    for (let i = 0; i < numShapes; i++) {
-      let shape = shapes[i],
-        perspective = fl / (fl + shape.z);
+        ctx.fillStyle = "#ffffff";
+        for (let i = 0; i < numShapes; i++) {
+          let shape = shapes[i],
+            perspective = fl / (fl + shape.z);
 
-      ctx.save();
-      ctx.translate(shape.x * perspective, shape.y * perspective);
-      ctx.scale(perspective, perspective);
-      ctx.fillRect(-3, -3, 6, 6);
-      ctx.restore();
+          ctx.save();
+          ctx.translate(shape.x * perspective, shape.y * perspective);
+          ctx.scale(perspective, perspective);
+          ctx.fillRect(-3, -3, 6, 6);
+          ctx.restore();
 
-      shape.z += 50;
-      if (shape.z > 10000) {
-        shape.z = 0;
-      }
-      fl += 0.01;
-      if (fl > 5000) {
-        fl = 3;
-      }
-    }
+          shape.z += 50;
+          if (shape.z > 10000) {
+            shape.z = 0;
+          }
+          fl += 0.01;
+          if (fl > 5000) {
+            fl = 3;
+          }
+        }
     }
 
     function rand(from, to){
@@ -398,9 +383,6 @@
     loop();
 
     
-
-
-
     </script>
     <script>
         gsap.registerPlugin(ScrollTrigger);

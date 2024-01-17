@@ -67,7 +67,7 @@ img{vertical-align:top;font-size:0;border:0;}
 
 
 /* /////////// 공통 /////////// */
-.scrdown {position: absolute;bottom: 0;right: 60px;text-align: center;z-index: 50000;display: block;}
+.scrdown {position: absolute;bottom: 0;right: 60px;text-align: center;z-index: 50000;display: block;padding: 0 13px;}
 .scrdown>div {height: 100px;width: 1px;background-color: #fff;margin: 0 auto;}
 .scrdown>p {font-size: 14px;color: #fff;writing-mode: vertical-rl;transform: rotate(180deg);text-transform: uppercase;margin-bottom: 20px;}
 .cpyright {position: absolute;bottom: 60px;left: 60px;color: #999898;font-size: 14px;z-index: 50000;}
