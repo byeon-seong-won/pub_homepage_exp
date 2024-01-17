@@ -42,7 +42,7 @@ $(document).ready(function() {
       this.y = y;
       this.ctx = ctx;
     
-      this.col = "#bbb";
+      this.col = "#aaa";
       // this.col = "#222";
       
       this.triArr = [];
@@ -94,7 +94,7 @@ $(document).ready(function() {
       },
     
       update: function () {
-        if(bwidth >= 950) {
+        if(bwidth >= 1150) {
         this.ctx.save();
         this.ctx.translate(this.x + 230, this.y + 50);
         this.ctx.rotate(this.theta);
@@ -116,7 +116,7 @@ $(document).ready(function() {
       
         this.ctx.restore();
       }       
-        else if(bwidth < 950) {
+        else if(bwidth < 1150) {
           this.ctx.save();
           this.ctx.translate(this.x + 0, this.y + 0);
           this.ctx.rotate(this.theta);

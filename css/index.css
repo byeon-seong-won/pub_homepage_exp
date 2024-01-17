@@ -118,7 +118,8 @@ canvas#canvas {
 /* /////////// 공 애니메이션 /////////// */
 canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
 .index .section.sec2 {position:relative;}
-.index .section.sec2 .rightImg>img.ball {
+
+.index .section.sec2 .rightImg>img.ball{
   animation: rotatebox ease-in-out infinite alternate;
   animation-duration: 5s;
   animation-fill-mode: both;
@@ -132,6 +133,21 @@ canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
   z-index: 100;
   width:360px;
 }
+/*
+.index .section.sec2 .rightImg>img.ball {
+  animation: rotatebox ease-in-out infinite alternate;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  animation-play-state: running;
+  transition: 0.2s;
+  margin-top: 34px;
+  margin-left: 123px;
+  position:absolute; left:50%; top:50%; transform: translate(-10%, -43%);
+  z-index: 100;
+  width:360px;
+}*/
 
 /* 공 회전 애니메이션 */
 @keyframes rotatebox {
@@ -155,7 +171,6 @@ canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
 /* 1600px 이하 공 애니메이션 (회전만)*/
 @media (max-width:1599.33px) {
   .index .section.sec2 .rightImg>img.ball {
-    transform: translate(-8%, -43%);
     width:16.8%;
     margin-left:8.5%;
     margin-top:1.9%;
@@ -255,6 +270,8 @@ canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
   .index .section.sec1 .section_inner .swiper-slide .swiperwrapper.swiper_txt h1 {font-size: 40px;line-height: 70px;}
   .index .sec1Swiper img.logo {width: 817px;max-width: 70%;}
 
+ 
+
 }
 
 
@@ -309,7 +326,7 @@ canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
 
   /* section 2 about us */
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .titleText {width: calc(100% - 80px);}
-  .index .section.sec2 .rightImg>img.ball {opacity: 0.5;}
+
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(1) {font-size: 30px;line-height: 45px;margin-top: 2vw;}
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell .ani_txt p:nth-child(2) {font-size: 18px;line-height: 26px;}
   .index .section.sec2 .fp-tableCell>div.leftText {flex: 1;}
@@ -441,7 +458,7 @@ canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
   .index .section.sec1 .section_inner .swiper-slide:nth-child(1) .ani_txt span {font-weight: 900;font-size: 2.03rem;text-shadow:-1px 0px #fff,1px 0px #fff,0px -1px #fff,0px 1px #fff;}
   .index .section.sec2 .fp-tableCell>div.leftText {bottom:60px;}
   .index .section.sec2 .fp-tableCell>div.leftText .tableCell {vertical-align: bottom;}
-  .index .section.sec2 .rightImg>img.ball {transform: translate(-50%, 120px); left:50%; top:0;width:114px; margin-top:213px; margin-left:-57px;}
+  
   .sec2 .Icon {width: calc(100% - 40px);}
   .sec2 .Icon li:nth-child(2) {left:calc(100% - 5px);}
   .Icon {width:100%; gap:100%;}
@@ -471,29 +488,59 @@ canvas#c {display: block;position: absolute;z-index: 1000; opacity: 0.4;}
 /* 공 애니메이션 */
 
 /* 1440 ~ 1599.33 */
-@media (min-width:1501px) and (max-width:1599.33px) {canvas#c {width:66%; left:23.5%; top:18%;}}
-@media (min-width:1440px) and (max-width:1500.33px) {canvas#c {width:65%; left:24%; top:18%;}}
+@media (min-width:1501px) and (max-width:1599.33px) {canvas#c {width:80%; left:14.5%; top:10%;}}
+@media (min-width:1440px) and (max-width:1500.33px) {canvas#c {width:65%; left:25%; top:18%;}}
 
 
 /* 1024 ~ 1439.33 */
-@media (min-width:1300px) and (max-width:1439.33px) {canvas#c {width:65%;left:23%; top:19%;}}
-@media (min-width:1200px) and (max-width:1299.33px) {canvas#c {width:64%;left:23%; top:19%;}}
-@media (min-width:1100px) and (max-width:1199.33px) {canvas#c {width:63%;left:22%; top:19%;}}
-@media (min-width:1024px) and (max-width:1099.33px) {canvas#c {width:62%;left:22%; top:19%;}}
+@media (min-width:1300px) and (max-width:1439.33px) {
+  canvas#c {width:65%;left:26%; top:19%;}
+  .index .section.sec2 .rightImg>img.ball {margin-left:12%;}
+}
+@media (max-width:1299.33px) {
+  canvas#c {width:64%;left:27%; top:19%;}
+  .index .section.sec2 .rightImg>img.ball {margin-left:13%;}
+}
 
+@media (max-width:1200px) {canvas#c {left:27%;}}
+
+@media (max-width:1149.88px) {canvas#c {left:39%; top:21%;}}
+
+/*
+@media (max-width:1099.33px) {canvas#c {width:62%;left:22%; top:19%;}}
+*/
 
 /* 561 ~ 1023.33 */
-@media (min-width:1000px) and (max-width:1023.33px) {canvas#c {width:50%;left:30%; top:25%;}}
-@media (min-width:900px) and (max-width:999.33px) {canvas#c {width:50%;left:41.5%; top:27.5%;}}
-@media (min-width:800px) and (max-width:899.33px) {canvas#c {width:50%;left:41.5%; top:27.5%;}}
-@media (min-width:700px) and (max-width:799.33px) {canvas#c {width:50%;left:41.5%;top:28%;}}
-@media (min-width:600px) and (max-width:699.33px) {canvas#c {width:50%;left:41.5%;top:27%;}}
-@media (min-width:561px) and (max-width:599.33px) {canvas#c {width:50%;left:41.5%;top:27%;}}
+@media (max-width:1025px) {
+  canvas#c {width:66%; left:41%; top:20%;}
+  .index .section.sec2 .rightImg>img.ball {
+    width:21%;
+    opacity: 0.5;
+    margin-left:14%;
+  }
+}
+@media (max-width:999.33px) {canvas#c {width:60%; left:44%; top:22.5%;}}
+@media (max-width:899.33px) {
+  canvas#c {left:48%;}
+  .index .section.sec2 .rightImg>img.ball {margin-left:18%}
+}
+
+
+@media (max-width:699.33px) {canvas#c {top:22%;}}
+
 
 
 /* 360 ~ 560 */
-@media (min-width:500px) and (max-width:560.33px) {canvas#c {width:65%;left:50%;top: 0;margin-top: 213px;transform: translate(-50%,-50%);}}
-@media (min-width:400px) and (max-width:499.33px) {canvas#c {width:65%;left:50%;top: 0;margin-top: 213px;transform: translate(-50%,-50%);}}
-@media (min-width:360px) and (max-width:399.33px) {canvas#c {width:80%;left:50%;top: 0;margin-top: 213px;transform: translate(-50%,-50%);}} 
+@media (max-width:560.33px) {
+  canvas#c {
+    width:450px;
+    left:50%;top: 0; margin-top:200px; transform: translate(-50%,-49%);
+    opacity: 0.25;
+  }
+  .index .section.sec2 .rightImg>img.ball{
+    transform: translate(-50%, 120px); left:50%; top:0; width:160px; margin-top:200px; margin-left:-80px;
+  }
+
+}
 
 
