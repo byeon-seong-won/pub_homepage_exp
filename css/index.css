@@ -61,7 +61,7 @@ canvas#canvas {
 
 
 /* 560x 이하 메인 bg 애니메이션 (회전만)*/
-@media (max-width:560.33px) {
+/* @media (max-width:560.33px) {
   .background-container {display: none;}
   .background-container.mobile {
     display: block;
@@ -87,7 +87,7 @@ canvas#canvas {
     from {background-position: center -500px;background-size:2500px;}
     to {background-position: 2000px top;background-size:2500px;}
   }
-}
+} */
 
 
 
