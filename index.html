@@ -325,16 +325,52 @@
     cY = height / 2;
 
     let fl = 3,
-    shapes = [],
-    numShapes = 1000;
+        shapes = [],
+        numShapes = 1000;
 
-    for(let i=0;i<numShapes;i++){
-      shapes[i] = {
-        x: rand(-5000,5000),
-        y: rand(-5000,5000),
-        z: rand(0,10000)
-      }
+    var wwidth = $(window).width();
+    var wheight = $(window).height();
+    console.log("wwidth" + wwidth)
+
+
+    if(wwidth > 560.33) {
+        numShapes = 2000;
+
+        for(let i=0;i<numShapes;i++){
+            shapes[i] = {
+              x: rand(-5000,5000),
+              y: rand(-5000,5000),
+              z: rand(0,10000)
+            }
+        }
+    } else if(wwidth < 1024.33) {
+        numShapes = 1500;
+        cX = wwidth / 2,
+        cY = wheight / 2;
+        for(let i=0;i<numShapes;i++){
+            shapes[i] = {
+              x: rand(-5000,5000),
+              y: rand(-5000,5000),
+              z: rand(0,10000)
+            }
+        }
+    } 
+    else if(wwidth < 560.33) {
+        numShapes = 500;
+        cX = wwidth / 2,
+        cY = wheight / 2;
+        for(let i=0;i<numShapes;i++){
+            shapes[i] = {
+              x: rand(-1000,1000),
+              y: rand(-1000,1000),
+              z: rand(0,10000)
+            }
+        }
     }
+
+
+    
+
 
     ctx.translate(cX, cY);
 
