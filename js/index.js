@@ -17,12 +17,7 @@ $(document).ready(function() {
       menu: '#menu',
       scrollingSpeed: 700,
       navigation: true,
-      // responsiveWidth: 1025,
-      navigationPosition: 'right',
- 
-      // navigationTooltips: ['Top Tier', 'Middle Tier', 'Bottom Tier'],
-      // easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
-      
+      navigationPosition: 'right',      
       onLeave: function(index, nextIndex, direction) {
         $('#fullpage').on('scroll touchmove mousewheel', function(event) {                    
           event.preventDefault();
@@ -50,8 +45,6 @@ $(document).ready(function() {
             $('.sub.quiz .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
             $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
             $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').addClass('ani')
-          
-          //  if(!$(".fp-completely .swiper-wrapper").length > 0) $('#fullpage').off('touchmove'); 
           } 
         // about us -> 메인
         else if (index == 2 && direction == 'up'){
@@ -74,8 +67,6 @@ $(document).ready(function() {
             if($(".sub .sec2").hasClass("active")) {
               swiper4.slideTo(0);
             }
-
-            // swiper1.slideTo(0);
 
         } 
 
@@ -166,10 +157,6 @@ $(document).ready(function() {
           $('.sub.every .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.sub.news .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) .slideWrap>div>div>div.rightImg>img').removeClass('ani')
           $('.index section .sec1 .ani_txt span').addClass('animation');
-          // if($(".index .sec1").hasClass("active")) {
-          //   $.fn.fullpage.setAllowScrolling(true); 
-          // } 
-
 
         } else {
           $('.index section .sec1 .ani_txt span').removeClass('animation')
@@ -454,16 +441,6 @@ $(document).ready(function() {
 
       }, 
     }); 
-
-
-
-
-
-
-
-
-
-
 
 
 

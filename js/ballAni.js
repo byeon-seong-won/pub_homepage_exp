@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-
+    var bwidth = $(window).width();
+    console.log("bwidth" + bwidth)
 
     // about us 우측 애니메이션
     window.requestAnimationFrame =
@@ -42,7 +43,8 @@ $(document).ready(function() {
       this.ctx = ctx;
     
       this.col = "#bbb";
-    
+      // this.col = "#222";
+      
       this.triArr = [];
     
       this.shapeType = {
@@ -92,10 +94,9 @@ $(document).ready(function() {
       },
     
       update: function () {
+        if(bwidth >= 950) {
         this.ctx.save();
-      
         this.ctx.translate(this.x + 230, this.y + 50);
-        // this.ctx.translate(-10%, -50%);
         this.ctx.rotate(this.theta);
       
         this.ctx.strokeStyle = this.col;
@@ -114,7 +115,51 @@ $(document).ready(function() {
         }
       
         this.ctx.restore();
-      }
+      }       
+        else if(bwidth < 950) {
+          this.ctx.save();
+          this.ctx.translate(this.x + 0, this.y + 0);
+          this.ctx.rotate(this.theta);
+          
+          this.ctx.strokeStyle = this.col;
+          
+          for (var i in this.triArr) {
+            var pt1 = this.triArr[i];
+            for (var j = i; j < this.triArr.length; j++) {
+              var pt2 = this.triArr[j];
+            
+              this.ctx.beginPath();
+              this.ctx.moveTo(pt1.x, pt1.y);
+              this.ctx.lineTo(pt2.x, pt2.y);
+              this.ctx.stroke();
+              this.ctx.closePath();
+            }
+          }
+          this.ctx.restore();
+        }
+        else if(bwidth < 561) {
+          this.ctx.save();
+          this.ctx.translate(this.x + 0, 0);
+          this.ctx.rotate(this.theta);
+          
+          this.ctx.strokeStyle = this.col;
+          
+          for (var i in this.triArr) {
+            var pt1 = this.triArr[i];
+            for (var j = i; j < this.triArr.length; j++) {
+              var pt2 = this.triArr[j];
+            
+              this.ctx.beginPath();
+              this.ctx.moveTo(pt1.x, pt1.y);
+              this.ctx.lineTo(pt2.x, pt2.y);
+              this.ctx.stroke();
+              this.ctx.closePath();
+            }
+          }
+          this.ctx.restore();
+        }
+      
+    }
     };
     
     // --------------------------

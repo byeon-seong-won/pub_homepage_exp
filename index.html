@@ -334,8 +334,8 @@
 
 
     if(wwidth > 1024.33) {
-        numShapes = 2000;
-
+        cX = wwidth / 2,
+        cY = wheight / 2;
         for(let i=0;i<numShapes;i++){
             shapes[i] = {
               x: rand(-5000,5000),
@@ -344,7 +344,6 @@
             }
         }
     } else if(wwidth < 1024.33) {
-        numShapes = 1500;
         cX = wwidth / 2,
         cY = wheight / 2;
         for(let i=0;i<numShapes;i++){
@@ -356,7 +355,7 @@
         }
     } 
     else if(wwidth < 560.33) {
-        numShapes = 500;
+        numShapes = 1800;
         cX = wwidth / 2,
         cY = wheight / 2;
         for(let i=0;i<numShapes;i++){
@@ -369,7 +368,6 @@
     }
 
 
-    
 
 
     ctx.translate(cX, cY);

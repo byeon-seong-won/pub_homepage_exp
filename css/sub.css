@@ -3,7 +3,7 @@
 
 
 .sub #fp-nav ul {display: none;}
-.sub .section {width: 100%;height: 100%;
+.sub .section {width: 100%;height:100%;
     overflow: hidden;
 }
 
@@ -85,7 +85,8 @@
 }
 .sub .section.sec2 .swiperWrap {width: 100%; height: 100%; }
 .sub .section.sec2 .swiperWrap .swiper-container {width: 100%; height: 100%;max-width: 1439px;margin: 0 auto;}
-.sub .section.sec2 .swiperWrap .swiper-container .swiper-wrapper {width: 100%;margin: 0 auto;height: 100vh;cursor: unset !important;}
+.sub .section.sec2 .swiperWrap .swiper-container .swiper-wrapper {
+    width: 100%; height:100%; margin: 0 auto; cursor: unset !important; }
 .sub .section.sec2 .swiperWrap .swiper-container .swiper-slide {height: 100% !important;width: 100% !important; margin: 0 auto;}
 .sub .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap {width: 100%;height: 100%;display: table;}
 .sub .section.sec2 .section_inner .swiper-container .swiper-wrapper .swiper-slide .slideWrap>div {display: table-cell;vertical-align: middle;}
